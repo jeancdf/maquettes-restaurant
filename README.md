@@ -19,7 +19,7 @@ Tous les boutons, menus et formulaires fonctionnent ; les formulaires affichent 
 - `kit/bespoke.js` : rend fonctionnelles les maquettes sur mesure (champs saisissables, demandes avec confirmation, menu mobile, options).
 - `complet.html` redirige vers `complet/index.html`.
 
-Essentiel (690 € HT) et Complet (1 190 € HT) utilisent le même établissement fictif pour comparer les gammes. Sur mesure : 1 990 à 2 990 € HT.
+Essentiel (790 € HT) et Complet (1 190 € HT) utilisent le même établissement fictif pour comparer les gammes. Sur mesure : 1 990 à 2 990 € HT.
 
 Établissements fictifs : tarifs et cartes indicatifs, coordonnées entre crochets à personnaliser.
 Photographies : [Unsplash](https://unsplash.com) (licence Unsplash), utilisées à titre d’illustration.
