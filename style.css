@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Instrument+Sans:wght@400..700&display=block');
+
+:root{
+  --green:#173B30; --green-2:#24503F; --sage:#EEF3EC; --sage-2:#DCE7D8; --tomato:#D3361F; --tomato-dk:#A92812;
+  --ink:#16241F; --muted:#56655E; --line:#DDE5DA; --paper:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#fff;font-family:'Instrument Sans',system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none;cursor:pointer}
+.dsp{font-family:'Archivo',sans-serif;font-stretch:112%;letter-spacing:-.02em}
+
+/* éléments du site */
+.logo{display:flex;align-items:baseline;gap:10px;color:var(--green)}
+.logo b{font-family:'Archivo';font-stretch:125%;font-weight:800;font-size:27px;letter-spacing:-.04em;line-height:1}
+.logo small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--tomato);color:#fff;font-weight:700;font-size:15px;padding:14px 22px;border-radius:6px;white-space:nowrap}
+.btn svg{width:16px;height:16px}
+.btn.line{background:transparent;color:var(--green);border:1.5px solid var(--green)}
+.btn.light{background:#fff;color:var(--green)}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--tomato)}
+.ph{color:var(--muted);background:#F1F5F0;border:1px dashed #A9BDB1;border-radius:4px;padding:1px 7px;font-size:.92em;white-space:nowrap}
+.dish{display:flex;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.dish:last-child{border-bottom:0}
+.dish div{flex:1}
+.dish b{font-weight:600;font-size:16.5px;display:block}
+.dish small{font-size:14px;color:var(--muted)}
+.dish .pr{font-family:'Archivo';font-weight:700;font-size:17px;font-variant-numeric:tabular-nums}
+.hours-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.hours-row:last-child{border-bottom:0}
+.hours-row span:last-child{font-variant-numeric:tabular-nums}
+.closed{color:var(--muted)}
+.map{position:relative;border-radius:8px;overflow:hidden;background:#E8EEE9}
+.map>svg{position:absolute;inset:0;width:100%;height:100%}
+.contact-line{display:flex;align-items:center;gap:12px;font-size:15.5px;padding:7px 0}
+.contact-line svg{width:18px;height:18px;color:var(--tomato);flex:none}
+
+/* gouttière fluide : contenu centré sur grand écran */
+:root{--gut:max(72px,calc((100vw - 1296px) / 2))}

@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Chez Odette — bistrot parisien (maquette)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@300..600&display=swap">
+<style>
+/* ===== version ordinateur (maquette 1440 px, mise à l'échelle) ===== */
+:root{--ink:#151414;--oxblood:#6A1D24;--ox-dk:#4E1419;--brass:#A88A55;--paper:#FFFFFF;--mist:#F5F3F0;--mut:#6B6560;--line:#E4DFD8}
+*{box-sizing:border-box;margin:0;padding:0}
+.dk{width:1440px;position:relative;background:var(--paper);color:var(--ink);font-family:'Jost',sans-serif;font-weight:400;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.dk .bd{font-family:'DM Serif Display',serif}
+.dk .sc{font-family:'Jost';font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase}
+.dk .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-weight:500;font-size:14px;letter-spacing:.14em;text-transform:uppercase;padding:17px 30px;white-space:nowrap}
+.dk .btn.ox{background:var(--oxblood);color:#fff}
+.dk .btn.ln{border:1px solid var(--ink);padding:16px 29px}
+.dk .ph{border-bottom:1px dashed #B9AFA4;color:var(--mut);white-space:nowrap}
+.dk .dbl{height:5px;border-top:1px solid var(--brass);border-bottom:1px solid var(--brass)}
+.dk .checker{height:26px;background:repeating-conic-gradient(var(--ink) 0 25%, #fff 0 50%) 0 0/26px 26px}
+.dk h2{font-family:'DM Serif Display';font-weight:500;font-size:62px;line-height:1.04;letter-spacing:-.01em}
+.dk h2 em{font-style:italic;color:var(--oxblood)}
+.dk .center{text-align:center}
+.dk .lead-sc{display:flex;align-items:center;justify-content:center;gap:16px;color:var(--brass)}
+.dk .lead-sc::before,.dk .lead-sc::after{content:"";width:40px;height:1px;background:var(--brass)}
+.dk .top{background:var(--ink);color:#D9D3CB;font-size:13px;letter-spacing:.06em;display:flex;justify-content:space-between;padding:11px 80px}
+.dk header{padding:30px 80px 0}
+.dk .mast{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-bottom:26px}
+.dk .mast nav{display:flex;gap:34px}
+.dk .mast nav.r{justify-content:flex-end;align-items:center}
+.dk .logo{text-align:center;line-height:1}
+.dk .logo b{font-family:'DM Serif Display';font-style:italic;font-weight:500;font-size:58px;letter-spacing:-.01em;display:block}
+.dk .logo small{display:block;margin-top:8px;color:var(--mut)}
+.dk .hero{padding:76px 80px 0;text-align:center}
+.dk .hero h1{font-family:'DM Serif Display';font-weight:400;font-size:96px;line-height:1;letter-spacing:-.02em;max-width:1100px;margin:22px auto 0}
+.dk .hero h1 em{font-style:italic;color:var(--oxblood)}
+.dk .hero{padding-bottom:90px}
+.dk .hero .lede{font-size:19px;font-weight:300;color:#4A4541;max-width:600px;margin:28px auto 0}
+.dk .frame{margin:56px 0 0;position:relative}
+.dk .frame .pic{height:620px;background:url(img/o-salle.jpg) center 55%/cover}
+.dk .frame figcaption{display:flex;justify-content:space-between;margin-top:12px;font-size:13.5px;color:var(--mut)}
+.dk .book{display:grid;grid-template-columns:1fr 1fr 1fr auto;border:1px solid var(--ink);margin-top:28px;text-align:left}
+.dk .book div{padding:16px 26px;border-right:1px solid var(--line)}
+.dk .book .sc{color:var(--mut);font-size:10.5px}
+.dk .book b{display:block;font-family:'DM Serif Display';font-weight:500;font-size:24px;margin-top:2px}
+.dk .book .btn{height:100%;padding:0 36px}
+.dk .ardoise{padding:120px 80px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.dk .mirror{position:relative;background:linear-gradient(135deg,#2B2A28 0%,#151413 55%,#22201E 100%);color:#fff;padding:56px 60px 50px;border:10px solid #2C2117;box-shadow:inset 0 0 0 1px rgba(168,138,85,.6),0 30px 60px rgba(20,20,20,.18)}
+.dk .mirror::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.07) 0%,rgba(255,255,255,0) 35%,rgba(255,255,255,.05) 60%,rgba(255,255,255,0) 70%);pointer-events:none}
+.dk .mirror .scr{font-family:'Pinyon Script',cursive;font-size:68px;line-height:1;color:#F7F4EF}
+.dk .mirror .d{color:#C9C2B8;font-size:14px;letter-spacing:.2em;text-transform:uppercase;margin-top:6px}
+.dk .mi{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.dk .mi:last-of-type{border-bottom:0}
+.dk .mi b{font-family:'Pinyon Script';font-weight:400;font-size:34px;line-height:1.1}
+.dk .mi span{font-family:'DM Serif Display';font-size:22px}
+.dk .mirror .note{margin-top:20px;font-size:13px;color:#B9B1A6;letter-spacing:.04em}
+.dk .ardoise .side .pic{height:560px;background:url(img/o-huitres.jpg) center/cover}
+.dk .ardoise .side p{margin-top:14px;font-size:14px;color:var(--mut)}
+.dk .carte{background:var(--mist);padding:120px 80px}
+.dk .carte .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:56px;margin-top:64px}
+.dk .carte h3{font-family:'DM Serif Display';font-weight:500;font-style:italic;font-size:30px;text-align:center;padding-bottom:16px;margin-bottom:8px;border-bottom:1px solid var(--brass)}
+.dk .dish{display:flex;align-items:baseline;gap:10px;padding:14px 0}
+.dk .dish div{flex:1}
+.dk .dish b{font-weight:500;font-size:17px;display:block}
+.dk .dish small{font-size:14px;color:var(--mut);font-weight:300}
+.dk .dish .pr{font-family:'DM Serif Display';font-size:19px}
+.dk .oysters{margin-top:56px;display:grid;grid-template-columns:auto 1fr auto auto;gap:36px;align-items:center;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:24px 0}
+.dk .oysters b{font-family:'DM Serif Display';font-size:30px;font-weight:500}
+.dk .oysters span{color:var(--mut);font-size:15px}
+.dk .oysters .pr{font-family:'DM Serif Display';font-size:22px;white-space:nowrap}
+.dk .illu{margin-top:22px;text-align:center;font-size:13.5px;color:var(--mut)}
+.dk .vins{display:grid;grid-template-columns:.9fr 1.1fr;min-height:640px}
+.dk .vins .pic{background:url(img/o-vin.jpg) center/cover}
+.dk .vins .txt{padding:110px 90px;display:flex;flex-direction:column;justify-content:center}
+.dk .vins h2{margin:18px 0 22px}
+.dk .vins p{color:#4A4541;font-weight:300;max-width:480px}
+.dk .wl{margin-top:34px;border-top:1px solid var(--line)}
+.dk .wl div{display:grid;grid-template-columns:1fr auto auto;gap:28px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.dk .wl b{font-weight:500}
+.dk .wl small{color:var(--mut);font-weight:300;font-size:14px;margin-left:8px}
+.dk .wl span{font-family:'DM Serif Display';font-size:18px;white-space:nowrap}
+.dk .wl .hd span,.dk .wl .hd b{font-family:'Jost';font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);font-weight:500}
+.dk .maison{background:var(--oxblood);color:#fff;padding:120px 80px}
+.dk .maison .eyebrow{color:#E2C9A0}
+.dk .maison h2 em{color:#E2C9A0}
+.dk .maison .intro{display:flex;justify-content:space-between;align-items:flex-end;gap:60px}
+.dk .maison .intro p{max-width:420px;color:#E9D9D8;font-weight:300}
+.dk .mg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;margin-top:64px}
+.dk .mg .pic{height:460px;background-size:cover;background-position:center 25%;filter:grayscale(1) contrast(1.05)}
+.dk .mg h3{font-family:'DM Serif Display';font-style:italic;font-weight:500;font-size:34px;margin-top:22px}
+.dk .mg .sc{color:#E2C9A0;display:block;margin-top:6px;font-size:11px}
+.dk .mg p{color:#E9D9D8;font-weight:300;font-size:15.5px;margin-top:8px}
+.dk .gal{padding:120px 80px}
+.dk .gg{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.3fr;grid-template-rows:280px 280px;gap:12px;margin-top:56px}
+.dk .gg div{background-size:cover;background-position:center}
+.dk .gg .t{grid-row:span 2}
+.dk .infos{padding:0 80px 120px;display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:56px}
+.dk .infos h3{font-family:'DM Serif Display';font-weight:500;font-style:italic;font-size:28px;margin-bottom:14px}
+.dk .hrow{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line);font-size:16px}
+.dk .hrow span:last-child{font-family:'DM Serif Display'}
+.dk .infos p{font-weight:300}
+.dk .infos .sc{display:block;color:var(--brass);margin:22px 0 6px;font-size:11px}
+.dk .map{height:100%;min-height:400px;border:1px solid var(--ink);position:relative;background:#F5F3F0}
+.dk .map svg{position:absolute;inset:0;width:100%;height:100%}
+.dk .final{background:var(--ink);color:#fff;text-align:center;padding:110px 80px}
+.dk .final h2{font-size:84px}
+.dk .final h2 em{color:#E2C9A0}
+.dk .final p{color:#CFC8BF;margin:20px 0 36px;font-weight:300}
+.dk .final .btn.ln{border-color:#fff;color:#fff}
+.dk footer{background:var(--ink);color:#A9A29A;padding:0 80px 34px;font-size:14px;font-weight:300}
+.dk .ft{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:40px 0;border-top:1px solid #2C2A28}
+.dk .ft .logo b{font-size:42px;color:#fff}
+.dk .fb{display:flex;justify-content:space-between;font-size:12.5px;letter-spacing:.04em}
+.dk .fb span span{margin-left:22px}
+.dk h1,.dk h2,.dk h3,.dk .logo b,.dk .book b,.dk .dish .pr,.dk .oysters b,.dk .oysters .pr,.dk .mg h3,.dk .infos h3,.dk .hrow span:last-child{font-weight:400!important}
+.dk .hero h1{font-size:88px;line-height:1.04;letter-spacing:-.01em}
+.dk h2{font-size:58px;letter-spacing:-.005em}
+.dk .logo b{font-size:54px}
+.dk .pm{display:grid;grid-template-columns:repeat(4,1fr);gap:34px 22px;margin-top:60px}
+.dk .pm .im{height:300px;background-size:cover;background-position:center}
+.dk .pm figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-top:14px;border-top:1px solid var(--ink);padding-top:12px}
+.dk .pm b{display:block;font-family:'DM Serif Display';font-weight:400;font-size:22px;line-height:1.15}
+.dk .pm small{display:block;font-size:14px;color:var(--mut);font-weight:300;margin-top:3px}
+.dk .pm figcaption span{font-family:'DM Serif Display';font-size:21px;white-space:nowrap}
+.dk .cave{background:#151414;color:#fff;padding:120px 80px 100px}
+.dk .cave .lead-sc{color:#C9A970}
+.dk .cave h2{margin:18px 0 22px;font-size:66px}
+.dk .cave h2 em{color:#C9A970}
+.dk .cave p{color:#CFC8BF;font-weight:300;max-width:560px;font-size:18px}
+.dk .cave-top{display:grid;grid-template-columns:1.3fr .7fr;gap:60px;align-items:end}
+.dk .big{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;align-items:baseline;border-left:1px solid #3A3633;padding-left:40px}
+.dk .big b{font-family:'DM Serif Display';font-weight:400;font-size:96px;line-height:1;color:#fff}
+.dk .big span{color:#CFC8BF;font-size:15px;letter-spacing:.04em}
+.dk .cave-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:300px 300px;gap:12px;margin-top:64px}
+.dk .cave-grid div{background-size:cover;background-position:center}
+.dk .cave-grid .c1{grid-row:span 2}
+.dk .cave-grid .c4{grid-column:span 2}
+.dk .regions{margin-top:64px;columns:2;column-gap:80px}
+.dk .regions .rh{display:flex;justify-content:space-between;color:#9E968D;padding-bottom:12px;border-bottom:1px solid #3A3633;column-span:all;margin-bottom:6px}
+.dk .rg{display:grid;grid-template-columns:200px 1fr 50px;align-items:center;gap:20px;padding:12px 0;border-bottom:1px solid #2C2A28;break-inside:avoid}
+.dk .rg span{font-size:16px}
+.dk .rg i{display:block;height:2px;background:linear-gradient(90deg,#C9A970 var(--w),#2C2A28 var(--w))}
+.dk .rg b{font-family:'DM Serif Display';font-weight:400;font-size:22px;text-align:right}
+.dk .cave-foot{display:flex;justify-content:space-between;align-items:center;margin-top:44px;color:#9E968D;font-size:14px}
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.dk{overflow:hidden}
+/* ===== version mobile ===== */
+:root{--bg:#FFFFFF;--fg:#151414;--soft:#4A4541;--mut:#6B6560;--line:#E4DFD8;--accent:#6A1D24;--onaccent:#fff;--panel:#fff;--btnbg:#6A1D24;--btnfg:#fff;--stickybg:rgba(255,255,255,.97);--disp:"DM Serif Display",serif;--dw:400;--body:"Jost",sans-serif;--emstyle:italic;--rad:0;--avr:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg)}
+.mb{color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.mb .p{padding:0 20px}
+.mb .cap{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);font-weight:500}
+.mb h2{font-family:var(--disp);font-weight:var(--dw);font-size:38px;line-height:1.08;margin-top:12px}
+.mb h2 em{font-style:var(--emstyle);color:var(--accent)}
+.mb .btn{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:500;font-size:14px;letter-spacing:.06em;padding:15px 18px;white-space:nowrap;border-radius:var(--rad)}
+.mb .btn.a{background:var(--btnbg);color:var(--btnfg)}
+.mb .btn.o{border:1px solid var(--fg);padding:14px 17px}
+.mb .ph{border-bottom:1px dashed var(--mut);color:var(--mut);white-space:nowrap}
+.mb section{position:relative}
+.mb header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line)}
+.mb header .r{display:flex;gap:10px;align-items:center}
+.mb header .btn{padding:10px 14px;font-size:12.5px}
+.mb .burger{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.mb .burger svg{width:18px;height:18px}
+.mb .hero{padding:26px 0 0}
+.mb .hero h1{font-family:var(--disp);font-weight:var(--dw);font-size:46px;line-height:1.05;margin:14px 0 14px}
+.mb .hero h1 em{font-style:var(--emstyle);color:var(--accent)}
+.mb .hero p{color:var(--soft);font-size:16px}
+.mb .hero .img{height:330px;margin-top:24px;background-size:cover;background-position:center}
+.mb .book{margin:0 20px;border:1px solid var(--line);padding:16px;background:var(--panel);transform:translateY(-36px)}
+.mb .book .f{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:6px;margin:10px 0 12px}
+.mb .book .f div{border:1px solid var(--line);padding:7px 10px}
+.mb .book .f b{display:block;font-family:var(--disp);font-weight:var(--dw);font-size:18px}
+.mb .book .note{font-size:12px;color:var(--mut);margin-top:10px}
+.mb .blk{padding:14px 20px 44px}
+.mb .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
+.mb .row b{display:block;font-weight:500;font-size:15.5px;line-height:1.3}
+.mb .row small{display:block;color:var(--mut);font-size:13px}
+.mb .row .pr{font-family:var(--disp);font-size:18px;white-space:nowrap}
+.mb .illu{font-size:12px;color:var(--mut);margin-top:12px}
+.mb .rail{display:flex;gap:12px;overflow:hidden;padding:22px 20px 0}
+.mb .rail .c{flex:none;width:240px}
+.mb .rail .c .im{height:260px;background-size:cover;background-position:center}
+.mb .rail .c h3{font-family:var(--disp);font-weight:var(--dw);font-size:24px;margin-top:12px;line-height:1.1}
+.mb .rail .c p{font-size:13.5px;color:var(--mut);margin-top:4px}
+.mb .dots{display:flex;gap:6px;justify-content:center;margin-top:20px}
+.mb .dots i{width:6px;height:6px;border-radius:50%;background:var(--line)}
+.mb .dots i.on{width:20px;border-radius:6px;background:var(--accent)}
+.mb .mem{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.mb .mem .av{width:72px;height:72px;background-size:cover;background-position:center 30%;border-radius:var(--avr)}
+.mb .mem h3{font-family:var(--disp);font-weight:var(--dw);font-size:22px;line-height:1.1}
+.mb .mem p{font-size:13.5px;color:var(--mut)}
+.mb .today{margin-top:18px;border:1px solid var(--accent);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.mb .today b{font-family:var(--disp);font-weight:var(--dw);font-size:20px;display:block;line-height:1.1}
+.mb .today span{font-size:13px;color:var(--soft)}
+.mb .today em{font-style:normal;background:var(--accent);color:var(--onaccent);font-size:11px;font-weight:600;letter-spacing:.06em;padding:4px 9px}
+.mb .hrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.mb .map{margin-top:20px;height:220px;border:1px solid var(--line);overflow:hidden}
+.mb .map svg{width:100%;height:100%}
+.mb .two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.mb .final{padding:60px 20px 54px;text-align:center;border-top:1px solid var(--line)}
+.mb .final h2{font-size:40px}
+.mb .final p{color:var(--soft);margin:12px 0 22px}
+.mb footer{border-top:1px solid var(--line);padding:30px 20px 120px;color:var(--mut);font-size:13.5px}
+.mb footer .links{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin:18px 0;color:var(--fg)}
+.mb footer .sm{font-size:11.5px;border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between}
+.mb .sticky{width:390px;padding:12px 16px 26px;background:var(--stickybg);border-top:1px solid var(--line);display:grid;grid-template-columns:52px 1fr;gap:10px}
+.mb .sticky .call{width:52px;height:52px;border:1px solid var(--fg);border-radius:50%;display:grid;place-items:center}
+.mb .sticky .call svg{width:20px;height:20px}
+.mb .btn{text-transform:uppercase;letter-spacing:.14em;font-size:12.5px}
+.mb .checker{height:18px;background:repeating-conic-gradient(#151414 0 25%,#fff 0 50%) 0 0/18px 18px}
+.mb .dish{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.mb .dish .th{width:72px;height:72px;background-size:cover;background-position:center}
+.mb .dish b{display:block;font-family:"DM Serif Display";font-weight:400;font-size:19px;line-height:1.15}
+.mb .dish small{display:block;font-size:13px;color:var(--mut)}
+.mb .dish .pr{font-family:"DM Serif Display";font-size:19px}
+.mb .cave{background:#151414;color:#fff;margin:40px -20px 0;padding:40px 20px 34px}
+.mb .cave h2{font-size:36px}
+.mb .cave h2 em{color:#C9A970}
+.mb .cave p{color:#CFC8BF;font-size:15px;margin-top:10px}
+.mb .cave .nums{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 18px}
+.mb .cave .nums div{border-top:1px solid #3A3633;padding-top:10px}
+.mb .cave .nums b{display:block;font-family:"DM Serif Display";font-weight:400;font-size:52px;line-height:1}
+.mb .cave .nums span{font-size:12.5px;color:#CFC8BF}
+.mb .cave .im{height:220px;background-size:cover;background-position:center;margin-bottom:16px}
+.mb .rg{display:grid;grid-template-columns:1fr 34px;gap:4px 12px;padding:9px 0;border-bottom:1px solid #2C2A28;font-size:14.5px}
+.mb .rg i{grid-column:1/-1;display:block;height:2px;background:linear-gradient(90deg,#C9A970 var(--w),#2C2A28 var(--w))}
+.mb .rg b{font-family:"DM Serif Display";font-weight:400;text-align:right}
+.mb .cave .illu{color:#9E968D}
+.mb .mem .av{filter:grayscale(1)}
+.mb #m-rail{background:#F5F3F0}
+
+.mb .rail{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-right:20px}
+.mb .rail::-webkit-scrollbar{display:none}
+.mb .rail .c{scroll-snap-align:start;scroll-margin-left:20px}
+.mb .sticky{position:fixed;left:0;right:0;bottom:0;width:auto;z-index:20;padding-bottom:max(16px,env(safe-area-inset-bottom))}
+
+.mb{display:none}
+@media (max-width:760px){.dk{display:none}.mb{display:block}}
+</style>
+</head>
+<body>
+<div class="dk">
+
+
+<div class="top"><span>Ouvert tous les jours · 12h – 15h · 19h – minuit</span><span>Paris 11<sup>e</sup> · <span class="ph" style="color:#D9D3CB">[Adresse]</span> · <span class="ph" style="color:#D9D3CB">[01 00 00 00 00]</span></span></div>
+<header>
+  <div class="mast">
+    <nav class="sc"><a href="#carte">La carte</a><a href="#cave">La cave</a><a href="#images">En images</a></nav>
+    <div class="logo"><b>Chez Odette</b><small class="sc">Bistrot parisien</small></div>
+    <nav class="sc r"><a href="#maison">La maison</a><a href="#infos">Infos</a><span class="btn ox" style="padding:12px 20px;font-size:12px">Réserver</span></nav>
+  </div>
+  <div class="dbl"></div>
+</header>
+
+<section class="hero">
+  <div class="lead-sc sc">Huîtres · plats de bistrot · grande cave</div>
+  <h1>Bistrot traditionnel<br><em>à Paris 11<sup style="font-size:.5em">e</sup></em></h1>
+  <p class="lede">Cuisine française faite maison, huîtres, plats du jour et plus de 300 vins en cave. Ouvert 7 jours sur 7, midi et soir.</p>
+  <figure class="frame"><div class="pic"></div><figcaption><span>La salle et ses miroirs</span><span>Photographie d’illustration</span></figcaption></figure>
+  <div class="book">
+    <div><span class="sc">Date</span><b>Ce soir</b></div>
+    <div><span class="sc">Couverts</span><b>2 personnes</b></div>
+    <div><span class="sc">Heure</span><b>20:30</b></div>
+    <span class="btn ox">Réserver une table</span>
+  </div>
+</section>
+
+<div class="checker"></div>
+
+<section id="carte" class="carte">
+  <div class="center"><div class="lead-sc sc">La carte</div><h2 style="margin-top:18px">Notre <em>carte</em></h2></div>
+  <div class="pm">
+    <figure><div class="im" style="background-image:url(img/o-tartare.jpg)"></div><figcaption><div><b>Tartare au couteau</b><small>frites maison, jaune d’œuf</small></div><span>24 €</span></figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/o-soupe.jpg)"></div><figcaption><div><b>Soupe à l’oignon</b><small>gratinée au comté</small></div><span>12 €</span></figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/o-escargots.jpg)"></div><figcaption><div><b>Escargots de Bourgogne</b><small>beurre persillé, les six</small></div><span>14 €</span></figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/o-huitres.jpg)"></div><figcaption><div><b>Huîtres de saison</b><small>les six · les douze 28 €</small></div><span>15 €</span></figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/o-magret.jpg)"></div><figcaption><div><b>Magret de canard</b><small>jus réduit, légumes glacés</small></div><span>27 €</span></figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/o-moules.jpg)"></div><figcaption><div><b>Moules marinières</b><small>frites maison</small></div><span>21 €</span></figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/o-gratin.jpg)"></div><figcaption><div><b>Gratin dauphinois</b><small>à partager</small></div><span>9 €</span></figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/o-creme.jpg)"></div><figcaption><div><b>Crème brûlée</b><small>vanille de Madagascar</small></div><span>9 €</span></figcaption></figure>
+  </div>
+  <div class="oysters"><b>Et aussi</b><span>Terrine de campagne, sole meunière, steak frites, profiteroles, tarte Tatin…</span><span class="pr">Carte complète</span><span class="pr">→</span></div>
+  <p class="illu">Carte et prix donnés à titre d’exemple. Photographies d’illustration.</p>
+</section>
+
+<section id="cave" class="cave">
+  <div class="cave-top">
+    <div><div class="lead-sc sc" style="justify-content:flex-start">La cave</div>
+      <h2>Une cave de plus de <em>300 références.</em></h2>
+      <p>Une cave voûtée sous la salle et des vins pour tous les budgets. Notre sommelier vous conseille à table.</p></div>
+    <div class="big"><b>300+</b><span>références en cave</span><b>25</b><span>vins au verre chaque jour</span></div>
+  </div>
+  <div class="cave-grid">
+    <div class="c1" style="background-image:url(img/o-cave.jpg)"></div>
+    <div class="c2" style="background-image:url(img/o-murvins.jpg)"></div>
+    <div class="c3" style="background-image:url(img/o-choix.jpg)"></div>
+    <div class="c4" style="background-image:url(img/o-etiquettes.jpg)"></div>
+  </div>
+  <div class="regions">
+    <div class="rh"><span class="sc">La carte des vins par région</span><span class="sc">Références</span></div>
+    <div class="rg"><span>Bourgogne</span><i style="--w:100%"></i><b>64</b></div>
+    <div class="rg"><span>Loire</span><i style="--w:81%"></i><b>52</b></div>
+    <div class="rg"><span>Rhône</span><i style="--w:75%"></i><b>48</b></div>
+    <div class="rg"><span>Bordeaux</span><i style="--w:63%"></i><b>40</b></div>
+    <div class="rg"><span>Languedoc et Roussillon</span><i style="--w:56%"></i><b>36</b></div>
+    <div class="rg"><span>Beaujolais</span><i style="--w:47%"></i><b>30</b></div>
+    <div class="rg"><span>Champagne</span><i style="--w:34%"></i><b>22</b></div>
+    <div class="rg"><span>Alsace, Jura, Savoie</span><i style="--w:28%"></i><b>18</b></div>
+  </div>
+  <div class="cave-foot"><span>Chiffres donnés à titre d’exemple, à remplacer par ceux du restaurant.</span><span class="btn ln" style="border-color:#fff;color:#fff">Voir la carte des vins</span></div>
+</section>
+
+<section id="maison" class="maison">
+  <div class="intro"><div><div class="lead-sc sc eyebrow" style="justify-content:flex-start">La maison</div><h2 style="margin-top:18px">Notre <em>équipe</em></h2></div>
+    <p>Prénoms et photos illustratifs. Sur le site final : l’équipe et la salle du bistrot.</p></div>
+  <div class="mg">
+    <div><div class="pic" style="background-image:url(img/o-chef.jpg)"></div><h3>Bastien</h3><span class="sc">En cuisine</span><p>Chef de cuisine.</p></div>
+    <div><div class="pic" style="background-image:url(img/o-barman.jpg)"></div><h3>Jo</h3><span class="sc">Au zinc</span><p>Sommelier, au bar.</p></div>
+    <div><div class="pic" style="background-image:url(img/o-nuit.jpg)"></div><h3>La salle</h3><span class="sc">Le lieu</span><p>Banquettes en moleskine, miroirs et grand zinc. Salle du fond pour les groupes.</p></div>
+  </div>
+</section>
+
+<section id="images" class="gal">
+  <div class="center"><div class="lead-sc sc">En images</div><h2 style="margin-top:18px">En <em>images</em></h2></div>
+  <div class="gg">
+    <div class="t" style="background-image:url(img/o-table.jpg)"></div>
+    <div style="background-image:url(img/o-huitres2.jpg)"></div>
+    <div style="background-image:url(img/o-assiette.jpg)"></div>
+    <div class="t" style="background-image:url(img/o-terrasse.jpg)"></div>
+    <div style="background-image:url(img/o-casier.jpg)"></div>
+    <div style="background-image:url(img/o-tarte.jpg)"></div>
+  </div>
+</section>
+
+<section id="infos" class="infos">
+  <div><h3>Horaires</h3>
+    <div class="hrow"><span>Tous les jours, midi</span><span>12h – 15h</span></div>
+    <div class="hrow"><span>Tous les jours, soir</span><span>19h – minuit</span></div>
+    <div class="hrow"><span>Cuisine</span><span>jusqu’à 23h</span></div>
+    <span class="sc">Groupes</span><p>Salle du fond privatisable, <span class="ph">[XX]</span> couverts.</p></div>
+  <div><h3>Adresse</h3>
+    <p><span class="ph">[Adresse du bistrot]</span><br><span class="ph">750XX Paris</span></p>
+    <span class="sc">Métro</span><p><span class="ph">[Station la plus proche]</span></p>
+    <span class="sc">Contact</span><p><span class="ph">[01 00 00 00 00]</span><br><span class="ph">[bonjour@chezodette.fr]</span></p></div>
+  <div class="map"><svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice">
+    <rect width="600" height="420" fill="#F5F3F0"/>
+    <g stroke="#E4DFD8" stroke-width="10" fill="none"><path d="M-20 300 L640 120"/><path d="M80 -20 L260 440"/><path d="M380 -20 L330 440"/><path d="M-20 90 L640 60"/></g>
+    <path d="M-20 360 C150 330 300 380 640 300" stroke="#DCD5CB" stroke-width="22" fill="none"/>
+    <text x="40" y="350" fill="#8C847B" font-family="Jost" font-size="11" letter-spacing="3" transform="rotate(-5 40 350)">BOULEVARD</text>
+    <g transform="translate(300 205)"><circle r="26" fill="none" stroke="#6A1D24"/><circle r="6" fill="#6A1D24"/></g>
+    <text x="336" y="200" fill="#151414" font-family="DM Serif Display" font-style="italic" font-size="24">Chez Odette</text>
+  </svg></div>
+</section>
+
+<section class="final">
+  <div class="lead-sc sc">Tous les jours</div>
+  <h2 style="margin-top:20px">Réservez <em>votre table</em></h2>
+  <p>Réservation en ligne ou par téléphone, 7 jours sur 7.</p>
+  <span class="btn ox">Réserver une table</span> <span class="btn ln" style="margin-left:10px">Appeler le bistrot</span>
+</section>
+<footer>
+  <div class="ft"><span>Paris 11<sup>e</sup> · ouvert tous les jours</span><div class="logo"><b>Chez Odette</b></div><span style="text-align:right">[Adresse] · [01 00 00 00 00]</span></div>
+  <div class="fb"><span>© Chez Odette<span>Mentions légales</span><span>Confidentialité</span></span><span>Maquette — restaurant fictif · informations illustratives</span></div>
+</footer>
+
+</div>
+<div class="mb">
+
+<header id="mb-head"><span style="font-family:DM Serif Display;font-style:italic;font-size:30px;line-height:1">Chez Odette</span><div class="r"><span class="btn a">Réserver</span><span class="burger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 9h16M4 15h16"/></svg></span></div></header>
+<section class="hero" id="mb-hero">
+  <div class="p"><div class="cap">Bistrot parisien · Paris 11e</div><h1>Bistrot traditionnel <em>à Paris 11<sup style="font-size:.5em">e</sup></em></h1><p>Cuisine maison, huîtres et plus de 300 vins en cave. Ouvert 7 jours sur 7.</p></div>
+  <div class="img" style="background-image:url(img/o-salle.jpg)"></div>
+  <div class="book"><div class="cap">Réserver une table</div><div class="f"><div><span class="cap">Date</span><b>Ce soir</b></div><div><span class="cap">Couverts</span><b>2</b></div><div><span class="cap">Heure</span><b>20:30</b></div></div><span class="btn a">Réserver</span><p class="note">Via <span class="ph">[outil de réservation]</span> · zinc sans réservation</p></div>
+</section>
+<section class="blk" id="mb-sig"><div class="checker" style="margin:0 -20px 34px"></div><div class="cap" style="color:#A88A55">La carte</div><h2>Notre <em>carte</em></h2><div style="margin-top:10px"><div class="dish"><div class="th" style="background-image:url(img/o-tartare.jpg)"></div><div><b>Tartare au couteau</b><small>frites maison</small></div><span class="pr">24 €</span></div><div class="dish"><div class="th" style="background-image:url(img/o-soupe.jpg)"></div><div><b>Soupe à l’oignon</b><small>gratinée au comté</small></div><span class="pr">12 €</span></div><div class="dish"><div class="th" style="background-image:url(img/o-escargots.jpg)"></div><div><b>Escargots de Bourgogne</b><small>les six</small></div><span class="pr">14 €</span></div><div class="dish"><div class="th" style="background-image:url(img/o-huitres.jpg)"></div><div><b>Huîtres de saison</b><small>les six</small></div><span class="pr">15 €</span></div><div class="dish"><div class="th" style="background-image:url(img/o-magret.jpg)"></div><div><b>Magret de canard</b><small>jus réduit</small></div><span class="pr">27 €</span></div><div class="dish"><div class="th" style="background-image:url(img/o-creme.jpg)"></div><div><b>Crème brûlée</b><small>vanille</small></div><span class="pr">9 €</span></div></div><p class="illu">Carte et prix donnés à titre d’exemple.</p><section class="cave" id="mb-cave"><div class="cap" style="color:#C9A970">La cave</div><h2>Une cave de plus de <em>300 références.</em></h2><p>Une cave voûtée et des vins pour tous les budgets.</p><div class="nums"><div><b>300+</b><span>références en cave</span></div><div><b>25</b><span>vins au verre chaque jour</span></div></div><div class="im" style="background-image:url(img/o-cave.jpg)"></div><div class="rg"><span>Bourgogne</span><b>64</b><i style="--w:100%"></i></div><div class="rg"><span>Loire</span><b>52</b><i style="--w:81%"></i></div><div class="rg"><span>Rhône</span><b>48</b><i style="--w:75%"></i></div><div class="rg"><span>Bordeaux</span><b>40</b><i style="--w:63%"></i></div><div class="rg"><span>Et cinq autres régions</span><b>106</b><i style="--w:100%"></i></div><p class="illu">Chiffres donnés à titre d’exemple.</p><span class="btn o" style="margin-top:16px;border-color:#fff;color:#fff">Voir la carte des vins</span></section></section>
+<section id="mb-rail" style="padding:44px 0 44px;"><div class="p"><div class="cap" style="color:#A88A55">En images</div><h2>En <em>images</em></h2></div><div class="rail" data-rail><div class="c"><div class="im" style="background-image:url(img/o-moules.jpg)"></div><h3>Les moules</h3><p>Marinières, frites maison.</p></div><div class="c"><div class="im" style="background-image:url(img/o-murvins.jpg)"></div><h3>Le mur de vins</h3><p>Visible depuis la salle.</p></div><div class="c"><div class="im" style="background-image:url(img/o-gratin.jpg)"></div><h3>Le gratin</h3><p>À partager.</p></div></div><div class="dots" data-dots><i class="on"></i><i></i><i></i></div></section>
+<section class="blk" id="mb-team" style="padding-top:44px"><div class="cap" style="color:#A88A55">La maison</div><h2>Notre <em>équipe</em></h2><div style="margin-top:10px"><div class="mem"><div class="av" style="background-image:url(img/o-chef.jpg)"></div><div><h3>Bastien</h3><span class="cap" style="color:var(--accent)">En cuisine</span><p>Chef de cuisine.</p></div></div><div class="mem"><div class="av" style="background-image:url(img/o-barman.jpg)"></div><div><h3>Jo</h3><span class="cap" style="color:var(--accent)">Au zinc</span><p>Sommelier, au bar.</p></div></div></div><p class="illu">Prénoms et portraits illustratifs.</p></section>
+<section class="blk" id="mb-infos" style="padding-top:20px"><div class="cap" style="color:#A88A55">Infos pratiques</div><h2>Horaires <em>et accès</em></h2><div class="today"><div><b>Aujourd’hui, jeudi</b><span>12h – 15h · 19h – minuit</span></div><em>Ouvert</em></div><div style="margin-top:6px"><div class="hrow"><span>Tous les jours</span><span>12h – 15h</span></div><div class="hrow"><span>Tous les soirs</span><span>19h – minuit</span></div><div class="hrow"><span>Cuisine</span><span>jusqu’à 23h</span></div></div>
+<div class="map"><svg viewBox="0 0 390 220" preserveAspectRatio="xMidYMid slice"><rect width="390" height="220" fill="#F5F3F0"/><g stroke="#E4DFD8" stroke-width="8" fill="none"><path d="M-20 170L410 60M60 -20L170 240M260 -20L220 240"/></g><path d="M-20 200C100 180 200 215 410 170" stroke="#DCD5CB" stroke-width="16" fill="none"/><circle cx="196" cy="108" r="16" fill="none" stroke="#6A1D24"/><circle cx="196" cy="108" r="4" fill="#6A1D24"/><text x="218" y="104" fill="#151414" font-family="Bodoni Moda" font-style="italic" font-size="18">Chez Odette</text></svg></div><p style="margin-top:14px;font-size:14.5px">Chez Odette · <span class="ph">[Adresse], 750XX Paris</span></p><div class="two"><span class="btn a">Itinéraire</span><span class="btn o">Appeler</span></div><p class="illu">Métro : <span class="ph">[station la plus proche]</span> · salle du fond pour les groupes</p></section>
+<section class="final" id="mb-final"><div class="cap" style="color:#A88A55">Tous les jours</div><h2>Réservez <em>votre table</em></h2><p>En ligne ou par téléphone, 7 jours sur 7.</p><span class="btn a">Réserver une table</span></section>
+<footer id="mb-foot"><span style="font-family:DM Serif Display;font-style:italic;font-size:30px;line-height:1">Chez Odette</span><p style="margin-top:10px">Bistrot parisien, Paris 11e, ouvert tous les jours.</p><div class="links"><span>La carte</span><span>La cave</span><span>En images</span><span>La maison</span><span>Infos</span><span>Mentions légales</span></div><div class="sm"><span>[01 00 00 00 00]</span><span>Maquette — restaurant fictif</span></div></footer>
+<div class="sticky" id="sticky"><span class="call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span class="btn a">Réserver une table</span></div>
+
+</div>
+<script>
+  // la maquette ordinateur est dessinée sur 1440 px : on la met à l'échelle de la fenêtre
+  const dk = document.querySelector('.dk');
+  let lastW = 0;
+  function fit() {
+    const w = document.documentElement.clientWidth;
+    if (w === lastW) return;
+    lastW = w;
+    dk.style.zoom = w > 760 ? w / 1440 : '';
+  }
+  addEventListener('resize', fit); setInterval(fit, 300); fit();
+
+  // points du carrousel (mobile)
+  const rail = document.querySelector('.mb [data-rail]');
+  const dots = [...document.querySelectorAll('.mb [data-dots] i')];
+  rail.addEventListener('scroll', () => {
+    const i = Math.round(rail.scrollLeft / (rail.scrollWidth - rail.clientWidth) * (dots.length - 1));
+    dots.forEach((d, k) => d.classList.toggle('on', k === i));
+  }, { passive: true });
+</script>
+</body>
+</html>

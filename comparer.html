@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Comparer les formules — sites de restaurant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Manrope:wght@500..800&display=swap">
+<style>
+  :root{--ink:#12162B;--cobalt:#2C44D8;--blush:#F7CFC8;--bar:60px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;overflow:hidden;background:var(--ink);font-family:'Manrope',system-ui,sans-serif}
+  .bar{height:var(--bar);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:0 20px;color:#C9CDDD;font-size:13px}
+  .brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
+  .brand b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;color:#fff;letter-spacing:-.04em}
+  .brand b i{font-style:normal;color:var(--blush)}
+  .sector select{appearance:none;-webkit-appearance:none;border:0;border-radius:999px;background:#1F2442 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C9CDDD' stroke-width='2.4'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 11px center/13px;color:#fff;font:600 13px 'Manrope',system-ui,sans-serif;padding:7px 32px 7px 14px;cursor:pointer}
+  .sector select:hover{background-color:#2A3052}
+  .sector select:focus-visible{outline:2px solid var(--blush);outline-offset:2px}
+  .sector option{color:#12162B;background:#fff}
+  .center{display:flex;align-items:center;gap:12px}
+  .switch{position:relative;display:grid;grid-template-columns:repeat(3,1fr);background:#1F2442;border-radius:999px;padding:4px}
+  .switch .pill{position:absolute;top:4px;bottom:4px;left:4px;width:calc((100% - 8px) / 3);border-radius:999px;background:#fff;transition:transform .22s cubic-bezier(.3,.7,.2,1)}
+  .switch[data-on="complet"] .pill{transform:translateX(100%)}
+  .switch[data-on="mesure"] .pill{transform:translateX(200%)}
+  .switch button{position:relative;z-index:1;border:0;background:none;cursor:pointer;font:inherit;color:#C9CDDD;padding:8px 20px;border-radius:999px;display:flex;justify-content:center;align-items:baseline;gap:8px;white-space:nowrap;transition:color .2s}
+  .switch button b{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;letter-spacing:-.02em}
+  .switch button span{font-size:12.5px;font-weight:600;color:#B8BDD0}
+  .switch button[aria-pressed="true"]{color:var(--ink)}
+  .switch button[aria-pressed="true"] span{color:var(--cobalt)}
+  .switch button:focus-visible,.sub button:focus-visible{outline:2px solid var(--blush);outline-offset:2px}
+  .sub{display:none;gap:4px}
+  body.sm .sub{display:flex}
+  .sub button{border:1px solid #3A4060;background:none;color:#C9CDDD;font:600 12.5px 'Manrope',sans-serif;padding:6px 12px;border-radius:999px;cursor:pointer;white-space:nowrap}
+  .sub button[aria-pressed="true"]{background:var(--blush);border-color:var(--blush);color:var(--ink)}
+  .tools{display:flex;justify-content:flex-end;align-items:center;gap:18px;white-space:nowrap}
+  .tools kbd{font:600 11px 'Manrope';border:1px solid #3A4060;border-radius:4px;padding:1px 6px;color:#fff}
+  .tools a{color:#fff;text-decoration:none;font-weight:600;display:inline-flex;gap:6px;align-items:center}
+  .tools a:hover{text-decoration:underline;text-underline-offset:4px}
+  .stage{position:relative;height:calc(100% - var(--bar));background:#fff}
+  .stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0;visibility:hidden}
+  .stage iframe.on{visibility:visible}
+  @media (max-width:1400px){.hint{display:none}}
+  @media (max-width:1240px){.switch button span{display:none}}
+  @media (max-width:1000px){.brand b{display:none}}
+  @media (max-width:820px){
+    :root{--bar:96px}
+    body.sm{--bar:132px}
+    .bar{grid-template-columns:1fr;align-content:center;gap:8px;padding:8px 12px}
+    .brand{justify-content:center}
+    .center{flex-direction:column;gap:8px}
+    .tools{display:none}
+    .switch{width:100%;max-width:420px}
+    .switch button{padding:8px 6px}
+    .switch button b{font-size:13.5px}
+  }
+</style>
+</head>
+<body>
+<div class="bar">
+  <div class="brand"><a href="./" title="Tous les modèles"><b>Maquettes<i>.</i></b></a><label class="sector"><select aria-label="Secteur" autocomplete="off" onchange="location.href=this.value"><option value="https://jeancdf.github.io/maquettes-coiffure/">Salons</option><option value="https://jeancdf.github.io/maquettes-restaurant/" selected>Restaurants</option><option value="https://jeancdf.github.io/maquettes-mariage/">Mariage</option><option value="https://jeancdf.github.io/maquettes-maisons-hotes/">Maisons d’hôtes</option><option value="https://jeancdf.github.io/maquettes-garage/">Garages</option><option value="https://jeancdf.github.io/maquettes-patisserie/">Pâtisseries</option></select></label></div>
+  <div class="center">
+    <div class="switch" role="group" aria-label="Choisir la formule" data-on="essentiel">
+      <span class="pill" aria-hidden="true"></span>
+      <button data-tier="essentiel" aria-pressed="true"><b>Essentiel</b><span>690 € HT</span></button>
+      <button data-tier="complet" aria-pressed="false"><b>Complet</b><span>1 190 € HT</span></button>
+      <button data-tier="mesure" aria-pressed="false"><b>Sur mesure</b><span>1 990 – 2 990 € HT</span></button>
+    </div>
+    <div class="sub" role="group" aria-label="Choisir l’exemple sur mesure">
+      <button data-id="braise" aria-pressed="false">Braise</button>
+      <button data-id="odette" aria-pressed="false">Chez Odette</button>
+      <button data-id="hinoki" aria-pressed="false">Hinoki</button>
+    </div>
+  </div>
+  <div class="tools">
+    <span class="hint">Touches <kbd>1</kbd> à <kbd>5</kbd> ou <kbd>←</kbd> <kbd>→</kbd></span>
+    <a id="solo" href="essentiel.html" target="_blank" rel="noopener">Ouvrir seule ↗</a>
+  </div>
+</div>
+<div class="stage">
+  <iframe id="f-essentiel" class="on" src="essentiel.html" title="Formule Essentiel"></iframe>
+  <iframe id="f-complet" src="complet.html" title="Formule Complet" loading="eager"></iframe>
+  <iframe id="f-braise" src="braise.html" title="Sur mesure — Braise" loading="eager"></iframe>
+  <iframe id="f-odette" src="odette.html" title="Sur mesure — Chez Odette" loading="eager"></iframe>
+  <iframe id="f-hinoki" src="hinoki.html" title="Sur mesure — Hinoki" loading="eager"></iframe>
+</div>
+<script>
+  const ids = ['essentiel', 'complet', 'braise', 'odette', 'hinoki'];
+  const custom = ['braise', 'odette', 'hinoki'];
+  const sw = document.querySelector('.switch');
+  const solo = document.getElementById('solo');
+  let lastCustom = 'braise';
+
+  function show(id) {
+    if (!ids.includes(id)) id = ids[0];
+    const tier = custom.includes(id) ? 'mesure' : id;
+    if (tier === 'mesure') lastCustom = id;
+    ids.forEach(k => document.getElementById('f-' + k).classList.toggle('on', k === id));
+    sw.querySelectorAll('[data-tier]').forEach(b => b.setAttribute('aria-pressed', b.dataset.tier === tier));
+    document.querySelectorAll('.sub [data-id]').forEach(b => b.setAttribute('aria-pressed', b.dataset.id === id));
+    document.body.classList.toggle('sm', tier === 'mesure');
+    sw.dataset.on = tier;
+    solo.href = id + '.html';
+    history.replaceState(null, '', '#' + id);
+  }
+
+  function onKey(e) {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const cur = document.querySelector('.stage iframe.on').id.slice(2);
+    const i = ids.indexOf(cur);
+    if (e.key >= '1' && e.key <= String(ids.length)) show(ids[e.key - 1]);
+    else if (e.key === 'ArrowRight') show(ids[(i + 1) % ids.length]);
+    else if (e.key === 'ArrowLeft') show(ids[(i + ids.length - 1) % ids.length]);
+    else return;
+    e.preventDefault();
+  }
+
+  sw.addEventListener('click', e => {
+    const b = e.target.closest('button');
+    if (b) show(b.dataset.tier === 'mesure' ? lastCustom : b.dataset.tier);
+  });
+  document.querySelector('.sub').addEventListener('click', e => {
+    const b = e.target.closest('button');
+    if (b) show(b.dataset.id);
+  });
+  document.addEventListener('keydown', onKey);
+  // les raccourcis marchent aussi quand le focus est dans une maquette
+  ids.forEach(k => {
+    const f = document.getElementById('f-' + k);
+    f.addEventListener('load', () => {
+      try { f.contentWindow.addEventListener('keydown', onKey); } catch (_) {}
+    });
+  });
+
+  show(location.hash.slice(1));
+
+</script>
+</body>
+</html>

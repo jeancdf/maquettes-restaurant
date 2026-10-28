@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hinoki — comptoir omakase, Nantes (maquette)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap">
+<style>
+/* ===== version ordinateur (maquette 1440 px, mise à l'échelle) ===== */
+:root{--washi:#F3F2EF;--paper:#FAFAF8;--sumi:#161615;--sumi2:#232321;--mut:#6E6B66;--line:#DEDBD5;--hinoki:#BFA27A;--shu:#B23A26}
+*{box-sizing:border-box;margin:0;padding:0}
+.dk{width:1440px;position:relative;background:var(--paper);color:var(--sumi);font-family:'Zen Kaku Gothic New',sans-serif;font-weight:400;font-size:16.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
+.dk .mn{font-family:'Shippori Mincho',serif}
+.dk .cap{font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--mut);font-weight:500}
+.dk .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-size:14px;letter-spacing:.12em;padding:17px 32px;white-space:nowrap;font-weight:500}
+.dk .btn.k{background:var(--sumi);color:#fff}
+.dk .btn.l{border:1px solid var(--sumi);padding:16px 31px}
+.dk .ph{border-bottom:1px dashed #B5B0A8;color:var(--mut);white-space:nowrap}
+.dk .hanko{display:inline-grid;place-items:center;width:44px;height:44px;background:var(--shu);color:#fff;font-family:'Shippori Mincho';font-size:24px;line-height:1;border-radius:3px}
+.dk h2{font-family:'Shippori Mincho';font-weight:500;font-size:52px;line-height:1.25;letter-spacing:.01em}
+.dk .vt{writing-mode:vertical-rl;font-family:'Shippori Mincho';letter-spacing:.3em}
+.dk .sec{padding:140px 80px}
+.dk .sh{display:grid;grid-template-columns:200px 1fr auto;gap:40px;align-items:start;margin-bottom:72px}
+.dk .sh .num{font-family:'Shippori Mincho';font-size:15px;color:var(--mut);padding-top:18px;border-top:1px solid var(--sumi)}
+.dk .sh p{max-width:360px;color:var(--mut);font-weight:300;padding-top:12px}
+.dk header{display:flex;align-items:center;justify-content:space-between;padding:30px 80px;border-bottom:1px solid var(--line)}
+.dk .logo{display:flex;align-items:center;gap:16px}
+.dk .logo b{font-family:'Shippori Mincho';font-weight:500;font-size:28px;letter-spacing:.12em}
+.dk .logo small{display:block;font-size:11px;letter-spacing:.24em;color:var(--mut);text-transform:uppercase;margin-top:2px}
+.dk nav{display:flex;gap:40px;font-size:14px;letter-spacing:.08em}
+.dk .hero{display:grid;grid-template-columns:120px 1fr 1.1fr;gap:0;min-height:820px}
+.dk .hero .side{border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:60px 0}
+.dk .hero .side .vt{font-size:44px;color:var(--sumi)}
+.dk .hero .side .cap{writing-mode:vertical-rl}
+.dk .hero .txt{padding:110px 70px 60px 80px;display:flex;flex-direction:column}
+.dk .hero h1{font-family:'Shippori Mincho';font-weight:500;font-size:60px;line-height:1.28;letter-spacing:.01em;margin-top:28px}
+.dk .hero p.lede{color:#4B4844;font-weight:300;font-size:18px;max-width:470px;margin-top:30px}
+.dk .hero .ctas{display:flex;gap:14px;margin-top:44px}
+.dk .hero .facts{margin-top:auto;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.dk .hero .facts div{padding:22px 16px 0 0}
+.dk .hero .facts b{display:block;font-family:'Shippori Mincho';font-weight:500;font-size:26px}
+.dk .hero .facts span{font-size:13.5px;color:var(--mut)}
+.dk .hero .pic{background:url(img/s-hero.jpg) center 60%/cover;position:relative}
+.dk .hero .pic .tag{position:absolute;left:28px;bottom:28px;background:var(--paper);padding:12px 18px;font-size:13px;letter-spacing:.06em}
+.dk .services{background:var(--sumi);color:#EDEBE6;padding:90px 80px}
+.dk .services .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;align-items:stretch}
+.dk .services .intro .cap{color:#A7A39C}
+.dk .services h2{margin-top:16px;font-size:44px}
+.dk .services .intro p{color:#B9B5AE;font-weight:300;margin-top:16px;max-width:340px}
+.dk .svc{border:1px solid #3A3936;padding:30px 30px 28px;display:flex;flex-direction:column}
+.dk .svc .cap{color:#A7A39C}
+.dk .svc b{font-family:'Shippori Mincho';font-weight:500;font-size:64px;line-height:1.1;margin-top:10px}
+.dk .svc p{color:#B9B5AE;font-weight:300;font-size:15px;margin-top:6px}
+.dk .svc .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:26px;border-top:1px solid #3A3936}
+.dk .svc .btn{background:#EDEBE6;color:var(--sumi);padding:13px 22px}
+.dk .svc .date{font-size:14px;color:#D6D2CB}
+.dk .grid2{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center}
+.dk .bk{display:grid;grid-template-columns:1.25fr .85fr 1fr auto;border:1px solid #3A3936;align-items:center}
+.dk .bk div{align-self:stretch;padding:22px 22px;border-right:1px solid #3A3936}
+.dk .bk b{display:block;white-space:nowrap;font-family:'Shippori Mincho';font-weight:500;font-size:28px;line-height:1.2;color:#EDEBE6;margin-top:4px}
+.dk .bk small{color:#A7A39C;font-size:13px}
+.dk .bk .btn{background:#EDEBE6;color:var(--sumi);margin:0 24px}
+.dk .course-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.dk .phase{border-top:1px solid var(--sumi);padding-top:20px;margin-bottom:46px}
+.dk .phase .hd{display:flex;justify-content:space-between;align-items:baseline}
+.dk .phase h3{font-family:'Shippori Mincho';font-weight:500;font-size:30px}
+.dk .phase h3 small{font-family:'Zen Kaku Gothic New';font-size:12px;letter-spacing:.24em;color:var(--mut);margin-left:14px;font-weight:500}
+.dk .phase .ct{font-size:13px;color:var(--mut);letter-spacing:.1em}
+.dk .phase ul{list-style:none;margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:6px 30px}
+.dk .phase li{display:flex;gap:14px;font-size:16px;padding:6px 0;border-bottom:1px solid var(--line)}
+.dk .phase li i{font-style:normal;font-family:'Shippori Mincho';color:var(--hinoki);width:24px}
+.dk .price{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--sumi)}
+.dk .price div{padding:24px 28px}
+.dk .price div+div{border-left:1px solid var(--sumi)}
+.dk .price b{display:block;font-family:'Shippori Mincho';font-weight:500;font-size:40px;line-height:1.2}
+.dk .price span{color:var(--mut);font-size:14px}
+.dk .illu{margin-top:16px;font-size:13px;color:var(--mut)}
+.dk .course-wrap .pics{display:grid;grid-template-rows:1fr auto;gap:16px}
+.dk .course-wrap .pics .a{height:640px;background:url(img/s-faconne.jpg) center/cover}
+.dk .course-wrap .pics .note{display:flex;justify-content:space-between;font-size:13.5px;color:var(--mut)}
+.dk .comptoir{display:grid;grid-template-columns:1.3fr .7fr;background:var(--washi)}
+.dk .comptoir .pic{min-height:620px;background:url(img/s-comptoir.jpg) center/cover}
+.dk .comptoir .txt{padding:100px 70px;position:relative}
+.dk .comptoir .vt{position:absolute;right:40px;top:100px;font-size:22px;color:var(--hinoki)}
+.dk .comptoir h2{font-size:44px;margin:18px 0 22px}
+.dk .comptoir p{color:#4B4844;font-weight:300;max-width:380px}
+.dk .rules{margin-top:34px;display:grid;gap:14px}
+.dk .rules div{display:grid;grid-template-columns:30px 1fr;gap:12px;font-size:15.5px}
+.dk .rules i{font-style:normal;font-family:'Shippori Mincho';color:var(--shu)}
+.dk .chef{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:center}
+.dk .chef .pic{height:700px;background:url(img/s-chef.jpg) center 30%/cover}
+.dk .chef h2{margin:18px 0 22px}
+.dk .chef p{color:#4B4844;font-weight:300;max-width:520px}
+.dk .duo{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px;border-top:1px solid var(--line);padding-top:28px}
+.dk .duo b{display:block;font-family:'Shippori Mincho';font-weight:500;font-size:28px}
+.dk .duo .cap{display:block;margin-top:4px}
+.dk .duo p{font-size:15px;margin-top:8px}
+.dk .gal{padding-top:0}
+.dk .gg{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 16px}
+.dk .gg figure .im{height:360px;background-size:cover;background-position:center}
+.dk .gg figcaption{display:flex;justify-content:space-between;margin-top:10px;font-size:13px;color:var(--mut)}
+.dk .gg figcaption b{font-family:'Shippori Mincho';font-weight:500;color:var(--sumi);font-size:15px}
+.dk .infos{background:var(--washi);display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:64px}
+.dk .infos h3{font-family:'Shippori Mincho';font-weight:500;font-size:24px;margin-bottom:14px}
+.dk .hrow{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.dk .hrow span:last-child{font-family:'Shippori Mincho'}
+.dk .hrow.off span:last-child{color:var(--mut)}
+.dk .infos .cap{display:block;margin:24px 0 6px}
+.dk .infos p{font-weight:300}
+.dk .map{border:1px solid var(--sumi);position:relative;min-height:420px;background:var(--paper)}
+.dk .map svg{position:absolute;inset:0;width:100%;height:100%}
+.dk .final{text-align:center;padding:150px 80px}
+.dk .final h2{font-size:60px;margin:22px 0 18px}
+.dk .final p{color:var(--mut);font-weight:300;margin-bottom:40px}
+.dk footer{border-top:1px solid var(--line);padding:44px 80px 34px;font-size:13.5px;color:var(--mut);display:flex;justify-content:space-between;align-items:center}
+html{scroll-behavior:smooth}
+body{margin:0;background:#FAFAF8;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.dk{overflow:hidden}
+/* ===== version mobile ===== */
+:root{--bg:#FAFAF8;--fg:#161615;--soft:#4B4844;--mut:#6E6B66;--line:#DEDBD5;--accent:#B23A26;--onaccent:#fff;--panel:#FAFAF8;--btnbg:#161615;--btnfg:#fff;--stickybg:rgba(250,250,248,.97);--disp:"Shippori Mincho",serif;--dw:500;--body:"Zen Kaku Gothic New",sans-serif;--emstyle:normal;--rad:0;--avr:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg)}
+.mb{color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.mb .p{padding:0 20px}
+.mb .cap{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);font-weight:500}
+.mb h2{font-family:var(--disp);font-weight:var(--dw);font-size:38px;line-height:1.08;margin-top:12px}
+.mb h2 em{font-style:var(--emstyle);color:var(--accent)}
+.mb .btn{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:500;font-size:14px;letter-spacing:.06em;padding:15px 18px;white-space:nowrap;border-radius:var(--rad)}
+.mb .btn.a{background:var(--btnbg);color:var(--btnfg)}
+.mb .btn.o{border:1px solid var(--fg);padding:14px 17px}
+.mb .ph{border-bottom:1px dashed var(--mut);color:var(--mut);white-space:nowrap}
+.mb section{position:relative}
+.mb header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line)}
+.mb header .r{display:flex;gap:10px;align-items:center}
+.mb header .btn{padding:10px 14px;font-size:12.5px}
+.mb .burger{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.mb .burger svg{width:18px;height:18px}
+.mb .hero{padding:26px 0 0}
+.mb .hero h1{font-family:var(--disp);font-weight:var(--dw);font-size:46px;line-height:1.05;margin:14px 0 14px}
+.mb .hero h1 em{font-style:var(--emstyle);color:var(--accent)}
+.mb .hero p{color:var(--soft);font-size:16px}
+.mb .hero .img{height:330px;margin-top:24px;background-size:cover;background-position:center}
+.mb .book{margin:0 20px;border:1px solid var(--line);padding:16px;background:var(--panel);transform:translateY(-36px)}
+.mb .book .f{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:6px;margin:10px 0 12px}
+.mb .book .f div{border:1px solid var(--line);padding:7px 10px}
+.mb .book .f b{display:block;font-family:var(--disp);font-weight:var(--dw);font-size:18px}
+.mb .book .note{font-size:12px;color:var(--mut);margin-top:10px}
+.mb .blk{padding:14px 20px 44px}
+.mb .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
+.mb .row b{display:block;font-weight:500;font-size:15.5px;line-height:1.3}
+.mb .row small{display:block;color:var(--mut);font-size:13px}
+.mb .row .pr{font-family:var(--disp);font-size:18px;white-space:nowrap}
+.mb .illu{font-size:12px;color:var(--mut);margin-top:12px}
+.mb .rail{display:flex;gap:12px;overflow:hidden;padding:22px 20px 0}
+.mb .rail .c{flex:none;width:240px}
+.mb .rail .c .im{height:260px;background-size:cover;background-position:center}
+.mb .rail .c h3{font-family:var(--disp);font-weight:var(--dw);font-size:24px;margin-top:12px;line-height:1.1}
+.mb .rail .c p{font-size:13.5px;color:var(--mut);margin-top:4px}
+.mb .dots{display:flex;gap:6px;justify-content:center;margin-top:20px}
+.mb .dots i{width:6px;height:6px;border-radius:50%;background:var(--line)}
+.mb .dots i.on{width:20px;border-radius:6px;background:var(--accent)}
+.mb .mem{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.mb .mem .av{width:72px;height:72px;background-size:cover;background-position:center 30%;border-radius:var(--avr)}
+.mb .mem h3{font-family:var(--disp);font-weight:var(--dw);font-size:22px;line-height:1.1}
+.mb .mem p{font-size:13.5px;color:var(--mut)}
+.mb .today{margin-top:18px;border:1px solid var(--accent);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.mb .today b{font-family:var(--disp);font-weight:var(--dw);font-size:20px;display:block;line-height:1.1}
+.mb .today span{font-size:13px;color:var(--soft)}
+.mb .today em{font-style:normal;background:var(--accent);color:var(--onaccent);font-size:11px;font-weight:600;letter-spacing:.06em;padding:4px 9px}
+.mb .hrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.mb .map{margin-top:20px;height:220px;border:1px solid var(--line);overflow:hidden}
+.mb .map svg{width:100%;height:100%}
+.mb .two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.mb .final{padding:60px 20px 54px;text-align:center;border-top:1px solid var(--line)}
+.mb .final h2{font-size:40px}
+.mb .final p{color:var(--soft);margin:12px 0 22px}
+.mb footer{border-top:1px solid var(--line);padding:30px 20px 120px;color:var(--mut);font-size:13.5px}
+.mb footer .links{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin:18px 0;color:var(--fg)}
+.mb footer .sm{font-size:11.5px;border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between}
+.mb .sticky{width:390px;padding:12px 16px 26px;background:var(--stickybg);border-top:1px solid var(--line);display:grid;grid-template-columns:52px 1fr;gap:10px}
+.mb .sticky .call{width:52px;height:52px;border:1px solid var(--fg);border-radius:50%;display:grid;place-items:center}
+.mb .sticky .call svg{width:20px;height:20px}
+.mb .hanko{display:inline-grid;place-items:center;width:34px;height:34px;background:#B23A26;color:#fff;font-family:"Shippori Mincho";font-size:19px}
+.mb .svc{border:1px solid #161615;padding:18px 18px 16px;margin-top:12px;display:flex;justify-content:space-between;align-items:center}
+.mb .svc b{font-family:"Shippori Mincho";font-weight:500;font-size:40px;line-height:1}
+.mb .svc span.cap{display:block;margin-bottom:6px}
+.mb .svc .btn{padding:11px 16px;font-size:12.5px}
+.mb .ph2{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #161615;padding-top:14px;margin-top:26px}
+.mb .ph2 b{font-family:"Shippori Mincho";font-weight:500;font-size:22px}
+.mb .hero .img{background-position:center 60%}
+.mb #m-rail{background:#F3F2EF}
+.mb h2 em{color:inherit}
+
+.mb .rail{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-right:20px}
+.mb .rail::-webkit-scrollbar{display:none}
+.mb .rail .c{scroll-snap-align:start;scroll-margin-left:20px}
+.mb .sticky{position:fixed;left:0;right:0;bottom:0;width:auto;z-index:20;padding-bottom:max(16px,env(safe-area-inset-bottom))}
+
+.mb{display:none}
+@media (max-width:760px){.dk{display:none}.mb{display:block}}
+</style>
+</head>
+<body>
+<div class="dk">
+
+
+<header>
+  <div class="logo"><span class="hanko">檜</span><div><b>HINOKI</b><small>Comptoir omakase · Nantes</small></div></div>
+  <nav><a href="#reservation">Réservation</a><a href="#omakase">L’omakase</a><a href="#comptoir">Le comptoir</a><a href="#chef">Le chef</a><a href="#infos">Infos</a></nav>
+  <span class="btn k" style="padding:13px 24px">Réserver</span>
+</header>
+
+<section class="hero">
+  <div class="side"><span class="vt">おまかせ</span><span class="cap">Quartier Graslin</span></div>
+  <div class="txt">
+    <span class="cap">Restaurant · comptoir à sushis · 8 places</span>
+    <h1>Sushis omakase<br>à Nantes</h1>
+    <p class="lede">Menu dégustation de 12 pièces préparé par le chef devant vous, au comptoir. Poisson frais livré chaque jour.</p>
+    <div class="ctas"><span class="btn k">Réserver</span><span class="btn l">Voir le menu</span></div>
+    <div class="facts">
+      <div><b>85 €</b><span>Menu omakase</span></div>
+      <div><b>12</b><span>Pièces</span></div>
+      <div><b>8</b><span>Places au comptoir</span></div>
+    </div>
+  </div>
+  <div class="pic"><span class="tag">Nigiri sur planche de hinoki</span></div>
+</section>
+
+<section id="reservation" class="services">
+  <div class="grid2">
+    <div class="intro"><span class="cap">Réservation</span><h2>Réservez en ligne.</h2><p>Choisissez la date, le nombre de personnes et l’horaire. Réservation via <span class="ph" style="color:#B9B5AE">[outil de réservation]</span>.</p></div>
+    <div class="bk">
+      <div><span class="cap">Date</span><b>Jeu. 30 oct.</b></div>
+      <div><span class="cap">Personnes</span><b>2</b></div>
+      <div><span class="cap">Horaire</span><b>19:00</b><small>ou 21:15</small></div>
+      <span class="btn">Réserver</span>
+    </div>
+  </div>
+</section>
+
+<section id="omakase" class="sec">
+  <div class="sh"><div class="num">一 — L’omakase</div><h2>Le menu<br>omakase.</h2><p>Le menu change selon les arrivages. Voici un exemple.</p></div>
+  <div class="course-wrap">
+    <div>
+      <div class="phase"><div class="hd"><h3>Zensai<small>Pour commencer</small></h3><span class="ct">2 bouchées</span></div>
+        <ul><li><i>01</i>Chawanmushi, bouillon dashi</li><li><i>02</i>Daikon mariné, sésame</li></ul></div>
+      <div class="phase"><div class="hd"><h3>Nigiri<small>Le cœur du repas</small></h3><span class="ct">9 pièces</span></div>
+        <ul><li><i>03</i>Daurade, zeste de yuzu</li><li><i>04</i>Saumon, sel fumé</li><li><i>05</i>Thon akami mariné</li><li><i>06</i>Maquereau, gingembre</li><li><i>07</i>Saint-Jacques, citron vert</li><li><i>08</i>Thon chutoro</li><li><i>09</i>Crevette, beurre noisette</li><li><i>10</i>Anguille, sauce tare</li><li><i>11</i>Tamago, omelette sucrée</li></ul></div>
+      <div class="phase"><div class="hd"><h3>Owan<small>Pour finir</small></h3><span class="ct">1 bol</span></div>
+        <ul><li><i>12</i>Soupe miso, coquillages</li></ul></div>
+      <div class="price"><div><b>85 €</b><span>L’omakase, douze pièces</span></div><div><b>+ 38 €</b><span>Accord de trois sakés</span></div></div>
+      <p class="illu">Menu et prix donnés à titre d’exemple. Allergies et régimes : à préciser à la réservation.</p>
+    </div>
+    <div class="pics"><div class="a"></div><div class="note"><span>Le geste du nigiri</span><span>Photographie d’illustration</span></div></div>
+  </div>
+</section>
+
+<section id="comptoir" class="comptoir">
+  <div class="pic"></div>
+  <div class="txt"><span class="vt">檜の木</span><span class="cap">二 — Le comptoir</span>
+    <h2>Le comptoir.</h2>
+    <p>8 places au comptoir en bois de hinoki, face au chef. Pas de tables en salle.</p>
+    <div class="rules">
+      <div><i>・</i><span>Arrivez 10 minutes avant le service</span></div>
+      <div><i>・</i><span>Annulation possible jusqu’à 24 h avant</span></div>
+      <div><i>・</i><span>Jusqu’à 4 personnes par réservation</span></div>
+    </div></div>
+</section>
+
+<section id="chef" class="sec">
+  <div class="chef">
+    <div class="pic"></div>
+    <div><span class="cap">三 — Le chef</span><h2>Le chef.</h2>
+      <p>Il prépare chaque pièce devant vous et présente le poisson du jour.</p>
+      <div class="duo">
+        <div><b>Ren</b><span class="cap">Itamae, chef</span><p>Le riz, la découpe, le rythme du service.</p></div>
+        <div><b>Mio</b><span class="cap">Salle et sakés</span><p>Elle accueille et propose les accords.</p></div>
+      </div>
+      <p class="illu" style="margin-top:22px">Prénoms et portraits illustratifs.</p></div>
+  </div>
+</section>
+
+<section class="sec gal">
+  <div class="sh"><div class="num">四 — Au comptoir</div><h2>Nos sushis.</h2><p>Photos d’illustration. Sur le site final : les pièces du chef.</p></div>
+  <div class="gg">
+    <figure><div class="im" style="background-image:url(img/s-saumon.jpg)"></div><figcaption><b>Saumon</b><span>Sel fumé</span></figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/s-thon.jpg)"></div><figcaption><b>Thon akami</b><span>Mariné au shoyu</span></figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/s-ardoise.jpg)"></div><figcaption><b>Saumon aburi</b><span>Passé au chalumeau</span></figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/s-planche.jpg)"></div><figcaption><b>Thon et gingembre</b><span>Sur planche</span></figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/s-boite.jpg)"></div><figcaption><b>Le poisson du jour</b><span>Avant la découpe</span></figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/s-sashimi.jpg)"></div><figcaption><b>Sashimi</b><span>Hors omakase</span></figcaption></figure>
+  </div>
+</section>
+
+<section id="infos" class="sec infos">
+  <div><h3>Horaires</h3>
+    <div class="hrow off"><span>Lundi, mardi</span><span>Fermé</span></div>
+    <div class="hrow"><span>Mercredi → samedi</span><span>19:00 · 21:15</span></div>
+    <div class="hrow"><span>Dimanche</span><span>12:30</span></div>
+    <span class="cap">Groupes</span><p>Comptoir privatisable pour 8 personnes.</p></div>
+  <div><h3>Adresse</h3>
+    <p><span class="ph">[Adresse du comptoir]</span><br><span class="ph">44000 Nantes</span></p>
+    <span class="cap">Accès</span><p>Quartier Graslin · <span class="ph">[arrêt de tram le plus proche]</span></p>
+    <span class="cap">Contact</span><p><span class="ph">[02 00 00 00 00]</span><br><span class="ph">[bonjour@hinoki.fr]</span></p></div>
+  <div class="map"><svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice">
+    <rect width="600" height="420" fill="#FAFAF8"/>
+    <g stroke="#E6E3DD" stroke-width="1"><path d="M0 70 H600 M0 140 H600 M0 210 H600 M0 280 H600 M0 350 H600 M100 0 V420 M200 0 V420 M300 0 V420 M400 0 V420 M500 0 V420"/></g>
+    <path d="M-20 380 C160 340 320 400 640 330" stroke="#E6E3DD" stroke-width="40" fill="none"/>
+    <text x="40" y="378" fill="#9A968F" font-family="Zen Kaku Gothic New" font-size="11" letter-spacing="4" transform="rotate(-4 40 378)">LOIRE</text>
+    <path d="M80 -10 L250 430 M420 -10 L330 430 M-10 120 L610 160" stroke="#D6D2CB" stroke-width="3" fill="none"/>
+    <rect x="276" y="176" width="34" height="34" fill="#B23A26"/><text x="293" y="200" fill="#fff" font-family="Shippori Mincho" font-size="20" text-anchor="middle">檜</text>
+    <text x="324" y="199" fill="#161615" font-family="Shippori Mincho" font-size="20">Hinoki</text>
+    <text x="110" y="80" fill="#9A968F" font-family="Zen Kaku Gothic New" font-size="12" letter-spacing="3">GRASLIN</text>
+  </svg></div>
+</section>
+
+<section class="final">
+  <span class="hanko" style="width:56px;height:56px;font-size:30px">檜</span>
+  <h2>Réservez votre place.</h2>
+  <p>Du mercredi au samedi à 19:00 et 21:15, le dimanche à 12:30.</p>
+  <span class="btn k">Réserver</span>
+</section>
+<footer><span>© Hinoki · Mentions légales · Confidentialité</span><span>[Adresse], 44000 Nantes · [02 00 00 00 00]</span><span>Maquette — restaurant fictif · informations illustratives</span></footer>
+
+</div>
+<div class="mb">
+
+<header id="mb-head"><span style="display:flex;align-items:center;gap:10px"><span class="hanko">檜</span><span style="font-family:Shippori Mincho;font-size:22px;letter-spacing:.12em">HINOKI</span></span><div class="r"><span class="btn a">Réserver</span><span class="burger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 9h16M4 15h16"/></svg></span></div></header>
+<section class="hero" id="mb-hero">
+  <div class="p"><div class="cap">Restaurant · comptoir à sushis</div><h1>Sushis omakase à Nantes</h1><p>Menu dégustation de 12 pièces, préparé par le chef devant vous au comptoir.</p></div>
+  <div class="img" style="background-image:url(img/s-hero.jpg)"></div>
+  <div class="book"><div class="cap">Réserver une place au comptoir</div><div class="f"><div><span class="cap">Date</span><b>Jeu. 30</b></div><div><span class="cap">Pers.</span><b>2</b></div><div><span class="cap">Horaire</span><b>19:00</b></div></div><span class="btn a">Réserver</span><p class="note">Via <span class="ph">[outil de réservation]</span> · 19:00 ou 21:15 · 8 places</p></div>
+</section>
+<section class="blk" id="mb-sig"><div class="cap">一 — L’omakase</div><h2>Le menu omakase.</h2><div class="ph2"><b>Zensai</b><span class="cap">2 bouchées</span></div><div class="row"><div><b>Chawanmushi, bouillon dashi</b></div><span class="pr">01</span></div><div class="row"><div><b>Daikon mariné, sésame</b></div><span class="pr">02</span></div><div class="ph2"><b>Nigiri</b><span class="cap">9 pièces</span></div><div class="row"><div><b>Daurade, zeste de yuzu</b></div><span class="pr">03</span></div><div class="row"><div><b>Saumon, sel fumé</b></div><span class="pr">04</span></div><div class="row"><div><b>Thon akami mariné</b></div><span class="pr">05</span></div><div class="row"><div><b>…et six autres pièces</b></div><span class="pr">06–11</span></div><div class="ph2"><b>Owan</b><span class="cap">1 bol</span></div><div class="row"><div><b>Soupe miso, coquillages</b></div><span class="pr">12</span></div><div class="row" style="margin-top:18px;border-top:1px solid #161615"><div><b>L’omakase · accord de trois sakés + 38 €</b></div><span class="pr">85 €</span></div><p class="illu">Menu et prix donnés à titre d’exemple.</p></section>
+<section id="mb-rail" style="padding:44px 0 44px;"><div class="p"><div class="cap">四 — Au comptoir</div><h2>Nos sushis.</h2></div><div class="rail" data-rail><div class="c"><div class="im" style="background-image:url(img/s-saumon.jpg)"></div><h3>Saumon</h3><p>Sel fumé.</p></div><div class="c"><div class="im" style="background-image:url(img/s-thon.jpg)"></div><h3>Thon akami</h3><p>Mariné au shoyu.</p></div><div class="c"><div class="im" style="background-image:url(img/s-planche.jpg)"></div><h3>Thon et gingembre</h3><p>Sur planche.</p></div></div><div class="dots" data-dots><i class="on"></i><i></i><i></i></div></section>
+<section class="blk" id="mb-team" style="padding-top:44px"><div class="cap">三 — Le chef</div><h2>Le chef.</h2><div style="margin-top:10px"><div class="mem"><div class="av" style="background-image:url(img/s-chef.jpg)"></div><div><h3>Ren</h3><span class="cap" style="color:var(--accent)">Itamae, chef</span><p>Le riz, la découpe, le rythme.</p></div></div><div class="mem"><div class="av" style="background-image:url(img/s-mains.jpg)"></div><div><h3>Mio</h3><span class="cap" style="color:var(--accent)">Salle et sakés</span><p>L’accueil et les accords.</p></div></div></div><p class="illu">Prénoms et portraits illustratifs.</p></section>
+<section class="blk" id="mb-infos" style="padding-top:20px"><div class="cap">Infos pratiques</div><h2>Horaires et accès.</h2><div class="today"><div><b>Ce soir, jeudi</b><span>19:00 · 21:15</span></div><em>Ouvert</em></div><div style="margin-top:6px"><div class="hrow"><span>Mer → sam</span><span>19:00 · 21:15</span></div><div class="hrow"><span>Dimanche</span><span>12:30</span></div><div class="hrow"><span>Lun, mar</span><span>Fermé</span></div></div>
+<div class="map"><svg viewBox="0 0 390 220" preserveAspectRatio="xMidYMid slice"><rect width="390" height="220" fill="#FAFAF8"/><g stroke="#E6E3DD"><path d="M0 55H390M0 110H390M0 165H390M78 0V220M156 0V220M234 0V220M312 0V220"/></g><path d="M-20 200C100 180 220 210 410 170" stroke="#E6E3DD" stroke-width="26" fill="none"/><path d="M50 -10L160 230M270 -10L220 230" stroke="#D6D2CB" stroke-width="2" fill="none"/><rect x="176" y="92" width="26" height="26" fill="#B23A26"/><text x="189" y="111" fill="#fff" font-family="Shippori Mincho" font-size="15" text-anchor="middle">檜</text><text x="210" y="110" fill="#161615" font-family="Shippori Mincho" font-size="16">Hinoki</text></svg></div><p style="margin-top:14px;font-size:14.5px">Hinoki · <span class="ph">[Adresse], 44000 Nantes</span></p><div class="two"><span class="btn a">Itinéraire</span><span class="btn o">Appeler</span></div><p class="illu">Arrivez 10 minutes avant le service · annulation jusqu’à 24 h avant</p></section>
+<section class="final" id="mb-final"><span class="hanko" style="width:46px;height:46px;font-size:25px">檜</span><h2 style="margin-top:18px">Réservez votre place.</h2><p>Du mercredi au samedi à 19:00 et 21:15, le dimanche à 12:30.</p><span class="btn a">Réserver</span></section>
+<footer id="mb-foot"><span style="display:flex;align-items:center;gap:10px"><span class="hanko">檜</span><span style="font-family:Shippori Mincho;font-size:22px;letter-spacing:.12em">HINOKI</span></span><p style="margin-top:10px">Comptoir omakase, quartier Graslin, Nantes.</p><div class="links"><span>Réservation</span><span>L’omakase</span><span>Le comptoir</span><span>Le chef</span><span>Infos</span><span>Mentions légales</span></div><div class="sm"><span>[02 00 00 00 00]</span><span>Maquette — restaurant fictif</span></div></footer>
+<div class="sticky" id="sticky"><span class="call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span class="btn a">Réserver</span></div>
+
+</div>
+<script>
+  // la maquette ordinateur est dessinée sur 1440 px : on la met à l'échelle de la fenêtre
+  const dk = document.querySelector('.dk');
+  let lastW = 0;
+  function fit() {
+    const w = document.documentElement.clientWidth;
+    if (w === lastW) return;
+    lastW = w;
+    dk.style.zoom = w > 760 ? w / 1440 : '';
+  }
+  addEventListener('resize', fit); setInterval(fit, 300); fit();
+
+  // points du carrousel (mobile)
+  const rail = document.querySelector('.mb [data-rail]');
+  const dots = [...document.querySelectorAll('.mb [data-dots] i')];
+  rail.addEventListener('scroll', () => {
+    const i = Math.round(rail.scrollLeft / (rail.scrollWidth - rail.clientWidth) * (dots.length - 1));
+    dots.forEach((d, k) => d.classList.toggle('on', k === i));
+  }, { passive: true });
+</script>
+</body>
+</html>
