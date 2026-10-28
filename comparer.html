@@ -80,7 +80,7 @@
 </div>
 <div class="stage">
   <iframe id="f-essentiel" class="on" src="essentiel.html" title="Formule Essentiel"></iframe>
-  <iframe id="f-complet" src="complet.html" title="Formule Complet" loading="eager"></iframe>
+  <iframe id="f-complet" src="complet/index.html" title="Formule Complet" loading="eager"></iframe>
   <iframe id="f-braise" src="braise.html" title="Sur mesure — Braise" loading="eager"></iframe>
   <iframe id="f-odette" src="odette.html" title="Sur mesure — Chez Odette" loading="eager"></iframe>
   <iframe id="f-hinoki" src="hinoki.html" title="Sur mesure — Hinoki" loading="eager"></iframe>
@@ -101,12 +101,14 @@
     document.querySelectorAll('.sub [data-id]').forEach(b => b.setAttribute('aria-pressed', b.dataset.id === id));
     document.body.classList.toggle('sm', tier === 'mesure');
     sw.dataset.on = tier;
-    solo.href = id + '.html';
+    solo.href = id === 'complet' ? 'complet/index.html' : id + '.html';
     history.replaceState(null, '', '#' + id);
   }
 
   function onKey(e) {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const el = e.target;
+    if (el && (el.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName))) return; // on tape dans un formulaire
     const cur = document.querySelector('.stage iframe.on').id.slice(2);
     const i = ids.indexOf(cur);
     if (e.key >= '1' && e.key <= String(ids.length)) show(ids[e.key - 1]);

@@ -203,7 +203,7 @@ html,body{background:var(--bg)}
 @media (max-width:760px){.dk{display:none}.mb{display:block}}
 </style>
 </head>
-<body>
+<body data-kind="table" data-city="Nantes">
 <div class="dk">
 
 
@@ -364,5 +364,7 @@ html,body{background:var(--bg)}
     dots.forEach((d, k) => d.classList.toggle('on', k === i));
   }, { passive: true });
 </script>
+<script src="kit/bespoke.js"></script>
+
 </body>
 </html>

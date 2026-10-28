@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Réserver — la tablée (maquette Complet)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="../kit/std.css">
+<style>:root{--pri:#173B30;--pri-2:#24503F;--acc:#A92812;--btn:#D3361F;--btn-2:#A92812;--soft:#EEF3EC;--ink:#16241F;--muted:#56655E;--line:#DDE5DA;--radius:6px;--fd:'Archivo';--fb:'Instrument Sans';--fdw:800;--fdls:-.03em}h1,h2,h3,.logo b{font-stretch:112%}</style>
+</head>
+<body>
+<div class="topbar wrap"><span><b>Ouvert ce midi</b> · 12 h – 14 h, puis 19 h – 22 h</span><span><span class="ph">[Adresse du restaurant]</span>, <span class="ph">[Ville]</span> · <a href="tel:+33000000000"><span class="ph">[00 00 00 00 00]</span></a></span></div>
+<header class="hd wrap">
+  <a class="logo" href="index.html"><b>la tablée</b><small>Bistrot</small></a>
+  <nav aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="prestations.html">La carte</a><a href="realisations.html">Galerie</a><a href="a-propos.html">L’équipe</a><a href="contact.html" class="on" aria-current="page">Réserver</a></nav>
+  <div class="side"><a class="btn sm" href="contact.html#demande">Réserver une table</a><button class="burger" type="button" aria-label="Menu" aria-expanded="false"><i></i></button></div>
+</header>
+<nav class="mnav" aria-label="Menu mobile"><a href="index.html">Accueil</a><a href="prestations.html">La carte</a><a href="realisations.html">Galerie</a><a href="a-propos.html">L’équipe</a><a href="contact.html" class="on" aria-current="page">Réserver</a><a class="btn" href="contact.html#demande">Réserver une table</a></nav>
+
+<main>
+<section class="ph-head wrap"><div class="crumb"><a href="index.html">Accueil</a> / Réserver</div>
+  <h1>Réserver une table</h1><p class="lede">Indiquez le jour, l’heure et le nombre de couverts : nous vous confirmons par SMS.</p></section>
+<section class="s wrap" style="padding-top:56px"><div class="contact">
+  <div><div class="eyebrow">Coordonnées</div>
+    <h3>Adresse</h3><p><span class="ph">[Adresse du restaurant]</span><br><span class="ph">[Code postal]</span> <span class="ph">[Ville]</span></p>
+    <h3>Horaires</h3><table class="hours"><tbody><tr><td>Dimanche, lundi</td><td>Fermé</td></tr><tr><td>Mardi → jeudi</td><td>12 h – 14 h · 19 h – 22 h</td></tr><tr><td>Vendredi</td><td>12 h – 14 h · 19 h – 22 h 30</td></tr><tr><td>Samedi</td><td>19 h – 22 h 30</td></tr></tbody></table>
+    <h3>Nous joindre</h3><a class="cline" href="tel:+33000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="ph">[00 00 00 00 00]</span></a><a class="cline" href="mailto:contact@nom-du-restaurant.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="ph">[contact@nom-du-restaurant.fr]</span></a><a class="cline" href="#" data-demo="Lien vers le compte Instagram à renseigner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg><span class="ph">[@compte-instagram]</span></a>
+    <h3>Accès</h3><p>Transports : <span class="ph">[arrêt le plus proche]</span>. Parking : <span class="ph">[parking à proximité]</span>. Accès de plain-pied.</p></div>
+  <div id="demande" style="scroll-margin-top:110px"><form class="demo" novalidate>
+        <div class="f"><label for="nom">Nom et prénom</label><input id="nom" name="nom" type="text" required></div><div class="f"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" required></div><div class="f full"><label for="email">E-mail</label><input id="email" name="email" type="email" required></div><div class="f"><label for="date">Date</label><input id="date" name="date" type="date" required></div><div class="f"><label for="heure">Heure</label><select id="heure" name="heure"><option>12 h</option><option>12 h 30</option><option>13 h</option><option>19 h</option><option>19 h 30</option><option>20 h</option><option>20 h 30</option><option>21 h</option></select></div><div class="f"><label for="couverts">Couverts</label><select id="couverts" name="couverts"><option>2 personnes</option><option>1 personne</option><option>3 personnes</option><option>4 personnes</option><option>5 personnes</option><option>6 personnes</option><option>7 à 10 personnes</option></select></div><div class="f"><label for="occasion">Occasion</label><select id="occasion" name="occasion"><option>—</option><option>Anniversaire</option><option>Repas d’affaires</option><option>Groupe</option></select></div><div class="f full"><label for="message">Précisions</label><textarea id="message" name="message" placeholder="Allergies, chaise haute, terrasse…"></textarea></div>
+        <label class="consent full"><input type="checkbox" name="rgpd" required> J’accepte que mes informations soient utilisées pour répondre à ma demande.</label>
+        <button class="btn full" type="submit">Réserver <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+      <div class="sent" role="status"><h3>Réservation demandée</h3><p>Nous vous confirmons la table par SMS. Récapitulatif :</p><dl></dl>
+        <p class="small">Maquette de démonstration : aucune donnée n’est envoyée.</p><button class="btn line sm" type="button" data-reset>Faire une autre demande</button></div></div>
+</div></section>
+<section class="s soft wrap"><div class="two"><div><div class="eyebrow">Avant d’écrire</div><h2 class="t">Questions courantes</h2></div>
+  <div class="faq"><details><summary>Peut-on venir sans réserver ?</summary><p>Le midi souvent, le soir c’est plus rare : réservez pour être sûr d’avoir une table.</p></details><details><summary>Proposez-vous des plats végétariens ?</summary><p>Oui, au moins une entrée et un plat végétariens chaque jour.</p></details><details><summary>Accueillez-vous les groupes ?</summary><p>Oui, jusqu’à 30 personnes, avec un menu choisi à l’avance. Privatisation possible le soir.</p></details><p style="margin-top:18px"><a class="link" href="prestations.html#faq">Toutes les questions →</a></p></div></div></section>
+</main>
+<footer class="ft wrap">
+  <div class="top">
+    <div><a class="logo" href="index.html"><b>la tablée</b><small>Bistrot</small></a><p style="margin-top:16px;max-width:290px">Bistrot de quartier, cuisine de saison midi et soir à <span class="ph">[Ville]</span>.</p></div>
+    <div><h4>Pages</h4><a class="l" href="index.html">Accueil</a><a class="l" href="prestations.html">La carte</a><a class="l" href="realisations.html">Galerie</a><a class="l" href="a-propos.html">L’équipe</a><a class="l" href="contact.html">Réserver</a></div>
+    <div><h4>Horaires</h4><span class="l">Mar → ven : midi et soir</span><span class="l">Samedi : le soir</span><span class="l">Dim, lun : fermé</span></div>
+    <div><h4>Contact</h4><span class="l"><span class="ph">[Adresse du restaurant]</span></span><a class="l" href="tel:+33000000000"><span class="ph">[00 00 00 00 00]</span></a><a class="l" href="mailto:contact@nom-du-restaurant.fr"><span class="ph">[contact@nom-du-restaurant.fr]</span></a></div>
+  </div>
+  <div class="bot"><span>© <span data-year></span> la tablée · <a href="mentions-legales.html">Mentions légales</a> · <a href="mentions-legales.html#donnees">Données personnelles</a></span><span class="demo-note">Maquette — établissement fictif, informations illustratives · Réalisation : [votre nom]</span></div>
+</footer>
+<script src="../kit/std.js"></script>
+</body>
+</html>

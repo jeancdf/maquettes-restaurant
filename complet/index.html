@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>la tablée — Bistrot (maquette Complet)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="../kit/std.css">
+<style>:root{--pri:#173B30;--pri-2:#24503F;--acc:#A92812;--btn:#D3361F;--btn-2:#A92812;--soft:#EEF3EC;--ink:#16241F;--muted:#56655E;--line:#DDE5DA;--radius:6px;--fd:'Archivo';--fb:'Instrument Sans';--fdw:800;--fdls:-.03em}h1,h2,h3,.logo b{font-stretch:112%}</style>
+</head>
+<body>
+<div class="topbar wrap"><span><b>Ouvert ce midi</b> · 12 h – 14 h, puis 19 h – 22 h</span><span><span class="ph">[Adresse du restaurant]</span>, <span class="ph">[Ville]</span> · <a href="tel:+33000000000"><span class="ph">[00 00 00 00 00]</span></a></span></div>
+<header class="hd wrap">
+  <a class="logo" href="index.html"><b>la tablée</b><small>Bistrot</small></a>
+  <nav aria-label="Navigation principale"><a href="index.html" class="on" aria-current="page">Accueil</a><a href="prestations.html">La carte</a><a href="realisations.html">Galerie</a><a href="a-propos.html">L’équipe</a><a href="contact.html">Réserver</a></nav>
+  <div class="side"><a class="btn sm" href="contact.html#demande">Réserver une table</a><button class="burger" type="button" aria-label="Menu" aria-expanded="false"><i></i></button></div>
+</header>
+<nav class="mnav" aria-label="Menu mobile"><a href="index.html" class="on" aria-current="page">Accueil</a><a href="prestations.html">La carte</a><a href="realisations.html">Galerie</a><a href="a-propos.html">L’équipe</a><a href="contact.html">Réserver</a><a class="btn" href="contact.html#demande">Réserver une table</a></nav>
+
+<main>
+<section class="hero soft wrap" style="padding-bottom:96px">
+  <div>
+    <div class="eyebrow">Bistrot de quartier, midi et soir</div>
+    <h1>On cuisine le marché, vous prenez le temps</h1>
+    <p class="lede">Une carte courte qui change avec les saisons, un plat du jour chaque midi et une cave de petits vignerons.</p>
+    <div class="ctas"><a class="btn" href="contact.html#demande">Réserver une table <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn line" href="prestations.html">Voir la carte</a></div>
+    <div class="keys"><div><b>Formule du midi</b><span>21 €, du mardi au vendredi</span></div><div><b>Terrasse</b><span>aux beaux jours</span></div><div><b>Groupes</b><span>sur demande, jusqu’à 30</span></div></div>
+  </div>
+  <div class="mos"><div class="a" style="background-image:url(../img/b-hero.jpg)"></div><div class="b" style="background-image:url(../img/b-plats.jpg)"></div><div class="c" style="background-image:url(../img/b-terrasse.jpg)"></div>
+    <div class="badge"><b>À l’ardoise ce midi</b>Joue de bœuf confite · 17 €</div></div>
+</section>
+<section class="quick wrap" aria-label="Réserver une table">
+  <form class="datecheck" style="--n:3">
+    <div><h3>Réserver une table</h3><p class="small">Confirmation par SMS.</p></div>
+    <div class="f"><label for="date">Date</label><input id="date" name="date" type="date" required></div><div class="f"><label for="heure">Heure</label><select id="heure" name="heure"><option>12 h</option><option>12 h 30</option><option>13 h</option><option>19 h</option><option>19 h 30</option><option>20 h</option><option>20 h 30</option><option>21 h</option></select></div><div class="f"><label for="couverts">Couverts</label><select id="couverts" name="couverts"><option>2 personnes</option><option>1 personne</option><option>3 personnes</option><option>4 personnes</option><option>5 personnes</option><option>6 personnes</option><option>7 à 10 personnes</option></select></div>
+    <button class="btn" type="submit">Voir</button>
+  </form>
+  <div class="res" role="status"><h3 style="margin-bottom:4px">Votre table</h3><dl></dl><div class="est"></div>
+    <p class="muted" style="margin-top:8px">Ajoutez vos coordonnées pour confirmer : nous vous envoyons un SMS.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;margin-top:16px"><a class="btn" data-go="contact.html" href="contact.html#demande">Confirmer la réservation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="link" type="button" data-again style="background:none;border:0;border-bottom:1px solid;cursor:pointer">Modifier</button></div></div>
+</section>
+<section class="s wrap">
+  <div class="sh"><div><div class="eyebrow">La carte</div><h2 class="t">Ce que l’on sert en ce moment</h2></div><a class="link" href="prestations.html">Toute la carte →</a></div>
+  <div class="offers"><article class="offer"><div class="pic" style="background-image:url(../img/b-oeuf.jpg)"></div>
+      <div class="body"><h3>Entrées</h3><div class="pr">de <b>8 €</b> à 11 €</div><div class="list"><div class="check menu-l"><span>Œuf parfait, champignons</span><em>9 €</em></div><div class="check menu-l"><span>Sardines grillées</span><em>11 €</em></div><div class="check menu-l"><span>Velouté du moment</span><em>8 €</em></div></div>
+      <a class="btn line sm go" href="prestations.html#entrees">Voir le détail</a></div></article><article class="offer hl"><div class="pic" style="background-image:url(../img/b-poisson.jpg)"></div>
+      <div class="body"><span class="tag">Le midi</span><h3>Plats</h3><div class="pr">de <b>17 €</b> à 22 €</div><div class="list"><div class="check menu-l"><span>Plat du jour, le midi</span><em>17 €</em></div><div class="check menu-l"><span>Merlu, beurre blanc</span><em>22 €</em></div><div class="check menu-l"><span>Bavette, frites maison</span><em>21 €</em></div></div>
+      <a class="btn line sm go" href="prestations.html#plats">Voir le détail</a></div></article><article class="offer"><div class="pic" style="background-image:url(../img/b-spread.jpg)"></div>
+      <div class="body"><h3>Desserts</h3><div class="pr">de <b>8 €</b> à 10 €</div><div class="list"><div class="check menu-l"><span>Mousse au chocolat</span><em>8 €</em></div><div class="check menu-l"><span>Tarte du moment</span><em>8 €</em></div><div class="check menu-l"><span>Fromages affinés</span><em>10 €</em></div></div>
+      <a class="btn line sm go" href="prestations.html#desserts">Voir le détail</a></div></article></div>
+  <div class="note"><span>Formule du midi : entrée + plat ou plat + dessert, 21 €, du mardi au vendredi.</span><a class="btn line sm" href="contact.html#demande">Réserver pour midi</a></div>
+</section>
+<section class="s soft wrap"><div class="sh"><div><div class="eyebrow">Le lieu</div><h2 class="t">Une salle lumineuse et une terrasse sur la rue</h2></div></div>
+  <div class="tabs"><div role="tablist" aria-label="Le lieu"><button role="tab" id="tab-0" aria-controls="ev-0" aria-selected="true">La salle</button><button role="tab" id="tab-1" aria-controls="ev-1" aria-selected="false">La terrasse</button><button role="tab" id="tab-2" aria-controls="ev-2" aria-selected="false">Le comptoir</button><button role="tab" id="tab-3" aria-controls="ev-3" aria-selected="false">Privatisation</button></div><div role="tabpanel" id="ev-0" aria-labelledby="tab-0"><div class="img" style="background-image:url(../img/b-salle.jpg)"></div>
+          <div><h3>La salle</h3><p>Des tables en bois, des chaises dépareillées et une grande baie vitrée. [XX] couverts.</p><a class="btn" href="contact.html#demande">Réserver en salle</a></div></div><div role="tabpanel" id="ev-1" aria-labelledby="tab-1" hidden><div class="img" style="background-image:url(../img/b-terrasse.jpg)"></div>
+          <div><h3>La terrasse</h3><p>Une vingtaine de places sur la rue, d’avril à octobre selon la météo.</p><p class="small">Sans réservation possible au déjeuner.</p><a class="btn" href="contact.html#demande">Réserver en terrasse</a></div></div><div role="tabpanel" id="ev-2" aria-labelledby="tab-2" hidden><div class="img" style="background-image:url(../img/b-table2.jpg)"></div>
+          <div><h3>Le comptoir</h3><p>Pour un déjeuner rapide seul ou à deux, face à la cuisine.</p></div></div><div role="tabpanel" id="ev-3" aria-labelledby="tab-3" hidden><div class="img" style="background-image:url(../img/b-salle2.jpg)"></div>
+          <div><h3>Privatisation</h3><p>Le restaurant se privatise en soirée, jusqu’à 40 personnes assises.</p><p class="small">Menu de groupe sur devis.</p><a class="btn" href="contact.html#demande">Demander un devis</a></div></div></div></section>
+<section class="s wrap" style="padding-top:88px">
+  <div class="sh"><div><div class="eyebrow">Comment ça se passe</div><h2 class="t">Venir à la Tablée</h2></div></div>
+  <div class="steps"><div class="step"><i>01</i><h3>Réservez</h3><p>En ligne ou par téléphone, même le jour même.</p></div><div class="step"><i>02</i><h3>Confirmation</h3><p>Un SMS avec l’heure et le nombre de couverts.</p></div><div class="step"><i>03</i><h3>À table</h3><p>La carte du jour et l’ardoise des vins.</p></div><div class="step"><i>04</i><h3>Groupes</h3><p>Au-delà de 8 personnes, menu à choisir à l’avance.</p></div></div>
+</section>
+<section class="s soft wrap">
+  <div class="sh"><div><div class="eyebrow">Galerie</div><h2 class="t">La table, la salle, la terrasse</h2></div><a class="link" href="realisations.html">Toute la galerie →</a></div>
+  <div class="gal"><figure data-cat="Assiettes" data-full="../img/b-plats.jpg" style="background-image:url(../img/b-plats.jpg)"><figcaption><b>Assiettes du midi</b>Exemple</figcaption></figure><figure data-cat="Salle" data-full="../img/b-salle.jpg" style="background-image:url(../img/b-salle.jpg)"><figcaption><b>La salle</b><span class="ph">[XX]</span> couverts</figcaption></figure><figure data-cat="Assiettes" data-full="../img/b-steak.jpg" style="background-image:url(../img/b-steak.jpg)"><figcaption><b>Bavette, frites maison</b>21 €</figcaption></figure><figure data-cat="Terrasse" data-full="../img/b-terrasse.jpg" style="background-image:url(../img/b-terrasse.jpg)"><figcaption><b>La terrasse</b>D’avril à octobre</figcaption></figure><figure data-cat="Assiettes" data-full="../img/b-poisson.jpg" style="background-image:url(../img/b-poisson.jpg)"><figcaption><b>Merlu, beurre blanc</b>22 €</figcaption></figure></div>
+  <p class="small" style="margin-top:12px">Photographies et légendes d’illustration.</p>
+</section>
+<section class="s wrap">
+  <div class="split"><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div style="min-height:240px;background:center/cover url(../img/b-chef1.jpg);border-radius:var(--r)"></div><div style="min-height:240px;background:center/cover url(../img/b-chef2.jpg);border-radius:var(--r)"></div></div>
+    <div><div class="eyebrow">L’équipe</div><h2 class="t">Ceux qui cuisinent et vous servent</h2><p>Hugo a ouvert la Tablée pour faire une cuisine de marché simple, à des prix de quartier. Léna prépare les desserts, Kenji les poissons et le plat du jour.</p>
+      <div class="duo"><div><b>Hugo</b><span>Chef et fondateur</span></div><div><b>Léna</b><span>Pâtisserie</span></div></div>
+      <p class="small">Prénoms et portraits illustratifs.</p>
+      <a class="btn line" style="margin-top:22px" href="a-propos.html">En savoir plus</a></div></div>
+</section>
+<section class="s wrap" style="padding-top:20px"><div class="band"><div><h2>Une table pour ce soir ?</h2><p>Choisissez votre créneau en ligne, ou appelez-nous pour un groupe.</p></div><a class="btn" href="contact.html#demande">Réserver une table</a></div></section>
+</main>
+<footer class="ft wrap">
+  <div class="top">
+    <div><a class="logo" href="index.html"><b>la tablée</b><small>Bistrot</small></a><p style="margin-top:16px;max-width:290px">Bistrot de quartier, cuisine de saison midi et soir à <span class="ph">[Ville]</span>.</p></div>
+    <div><h4>Pages</h4><a class="l" href="index.html">Accueil</a><a class="l" href="prestations.html">La carte</a><a class="l" href="realisations.html">Galerie</a><a class="l" href="a-propos.html">L’équipe</a><a class="l" href="contact.html">Réserver</a></div>
+    <div><h4>Horaires</h4><span class="l">Mar → ven : midi et soir</span><span class="l">Samedi : le soir</span><span class="l">Dim, lun : fermé</span></div>
+    <div><h4>Contact</h4><span class="l"><span class="ph">[Adresse du restaurant]</span></span><a class="l" href="tel:+33000000000"><span class="ph">[00 00 00 00 00]</span></a><a class="l" href="mailto:contact@nom-du-restaurant.fr"><span class="ph">[contact@nom-du-restaurant.fr]</span></a></div>
+  </div>
+  <div class="bot"><span>© <span data-year></span> la tablée · <a href="mentions-legales.html">Mentions légales</a> · <a href="mentions-legales.html#donnees">Données personnelles</a></span><span class="demo-note">Maquette — établissement fictif, informations illustratives · Réalisation : [votre nom]</span></div>
+</footer>
+<script src="../kit/std.js"></script>
+</body>
+</html>
