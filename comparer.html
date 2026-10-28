@@ -55,11 +55,19 @@
     .switch button{padding:8px 6px}
     .switch button b{font-size:13.5px}
   }
+  .cc{display:inline-flex;align-items:center;gap:6px;background:#0964F4;color:#fff!important;text-decoration:none!important;font-weight:700;border-radius:999px;padding:7px 14px;white-space:nowrap}
+  .cc:hover{background:#0752c9}
+  .cc:focus-visible{outline:2px solid var(--blush);outline-offset:2px}
+  .cc-m{display:none;font-size:12.5px;padding:6px 12px}
+  @media (max-width:1800px){.hint{display:none}}
+  @media (max-width:1600px){.switch button span{display:none}#solo{font-size:0}#solo::after{content:"↗";font-size:16px}}
+  @media (max-width:1199px){.tools{display:none!important}.cc-m{display:inline-flex}}
+  @media (min-width:821px) and (max-width:980px){.sub button{padding:6px 9px;font-size:12px}.switch button{padding:8px 12px}.bar{gap:10px;padding:0 14px}}
 </style>
 </head>
 <body>
 <div class="bar">
-  <div class="brand"><a href="./" title="Tous les modèles"><b>Maquettes<i>.</i></b></a><label class="sector"><select aria-label="Secteur" autocomplete="off" onchange="location.href=this.value"><option value="https://jeancdf.github.io/maquettes-coiffure/">Salons</option><option value="https://jeancdf.github.io/maquettes-restaurant/" selected>Restaurants</option><option value="https://jeancdf.github.io/maquettes-mariage/">Mariage</option><option value="https://jeancdf.github.io/maquettes-maisons-hotes/">Maisons d’hôtes</option><option value="https://jeancdf.github.io/maquettes-garage/">Garages</option><option value="https://jeancdf.github.io/maquettes-patisserie/">Pâtisseries</option></select></label></div>
+  <div class="brand"><a href="./" title="Tous les modèles"><b>Maquettes<i>.</i></b></a><label class="sector"><select aria-label="Secteur" autocomplete="off" onchange="location.href=this.value"><option value="https://jeancdf.github.io/maquettes-coiffure/">Salons</option><option value="https://jeancdf.github.io/maquettes-restaurant/" selected>Restaurants</option><option value="https://jeancdf.github.io/maquettes-mariage/">Mariage</option><option value="https://jeancdf.github.io/maquettes-maisons-hotes/">Maisons d’hôtes</option><option value="https://jeancdf.github.io/maquettes-garage/">Garages</option><option value="https://jeancdf.github.io/maquettes-patisserie/">Pâtisseries</option></select></label><a class="cc cc-m" data-cc href="https://client-contact.fr/?utm_source=maquettes&amp;utm_medium=comparateur-mobile&amp;utm_campaign=restaurant" target="_blank" rel="noopener">Je veux ce site</a></div>
   <div class="center">
     <div class="switch" role="group" aria-label="Choisir la formule" data-on="essentiel">
       <span class="pill" aria-hidden="true"></span>
@@ -75,7 +83,8 @@
   </div>
   <div class="tools">
     <span class="hint">Touches <kbd>1</kbd> à <kbd>5</kbd> ou <kbd>←</kbd> <kbd>→</kbd></span>
-    <a id="solo" href="essentiel.html" target="_blank" rel="noopener">Ouvrir seule ↗</a>
+    <a class="cc" data-cc href="https://client-contact.fr/?utm_source=maquettes&amp;utm_medium=comparateur&amp;utm_campaign=restaurant" target="_blank" rel="noopener">Je veux ce site <span aria-hidden="true">→</span></a>
+    <a id="solo" href="essentiel.html" target="_blank" rel="noopener" title="Ouvrir la maquette seule" aria-label="Ouvrir la maquette seule">Ouvrir seule ↗</a>
   </div>
 </div>
 <div class="stage">
@@ -137,6 +146,12 @@
 
   show(location.hash.slice(1));
 
+</script>
+<script>
+  // le bouton « Je veux ce site » transmet le modèle affiché
+  document.querySelectorAll('a[data-cc]').forEach(a => a.addEventListener('click', () => {
+    const u = new URL(a.href); u.searchParams.set('utm_content', location.hash.slice(1) || 'essentiel'); a.href = u;
+  }));
 </script>
 </body>
 </html>
